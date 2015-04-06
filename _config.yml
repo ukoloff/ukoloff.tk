@@ -3,3 +3,8 @@ exclude:
 - README.md
 - CNAME
 - FarMenu.ini
+defaults:
+- scope:
+    path: "" # empty string for all files
+  values:
+    layout: "default"
