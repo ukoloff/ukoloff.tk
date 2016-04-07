@@ -2,22 +2,31 @@
   "name": "ukoloff.tk",
   "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Personal site using DocPad",
+  "main": "node_modules/docpad/bin/docpad",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node_modules/.bin/docpad-server",
+    "test": "node_modules/.bin/docpad generate --silent",
+    "deploy": "node_modules/.bin/docpad deploy-ghpages --silent --env static"
   },
   "repository": {
     "type": "git",
     "url": "git+https://ukoloff@github.com/ukoloff/ukoloff.tk.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "docpad",
+    "homepage",
+    "without"    
+  ],
+  "author": {
+    "name": "Stas Ukolov",
+    "email": "ukoloff@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ukoloff/ukoloff.tk/issues"
   },
-  "homepage": "https://github.com/ukoloff/ukoloff.tk#readme",
+  "homepage": "https://github.com/ukoloff/ukoloff.tk",
   "dependencies": {
     "bootstrap": "^3.3.6",
     "bootswatch": "^3.3.6",
@@ -33,5 +42,8 @@
     "font-awesome": "^4.5.0",
     "jquery": "^1.12.3",
     "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "~2.7.1"
   }
 }
