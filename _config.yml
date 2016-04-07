@@ -3,7 +3,9 @@ exclude:
 - README.md
 - CNAME
 - FarMenu.ini
-include: 
+- node_modules
+- out
+include:
 - .ssh
 defaults:
 - scope:
