@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ukoloff/ukoloff.tk/issues"
   },
-  "homepage": "https://github.com/ukoloff/ukoloff.tk#readme"
+  "homepage": "https://github.com/ukoloff/ukoloff.tk#readme",
+  "dependencies": {
+    "docpad": "^6.78.4"
+  }
 }
