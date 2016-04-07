@@ -1,2 +1,14 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules
+
+# DocPad output folder
+/out
+
+# Jekyll folders
 _site/
 .sass-cache/
