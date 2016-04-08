@@ -8,8 +8,10 @@ html ->
   head ->
     title @document.title
     Block "meta"
-    Block "styles"
+    Block "styles", ->
+      @add ["/the.css"]
     Block "scripts"
   body ->
-    h1 @document.title
-    raw @content
+    div class: 'container-fluid', ->
+      h1 @document.title
+      raw @content

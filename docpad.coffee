@@ -4,6 +4,9 @@
 #@poweredByDocPad = false
 
 @plugins =
+  less:
+    parseOptions:
+      paths: "#{__dirname}/node_modules"
   copy:
     raw:
       src: 'raw'
