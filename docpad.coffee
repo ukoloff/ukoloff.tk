@@ -4,8 +4,9 @@
 # @poweredByDocPad = false
 
 @collections =
-  _html: ->
+  entitled: ->
     @getCollection "html"
+    .findAllLive 'title': $type: 'string'
     .on "add", (model) ->
       model.setMetaDefaults layout:"default"
 
