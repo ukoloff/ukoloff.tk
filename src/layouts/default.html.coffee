@@ -19,4 +19,4 @@ html ->
       h1 @document.title
       raw @content
 
-   raw @partial "footer"
+    raw @partial "footer"
