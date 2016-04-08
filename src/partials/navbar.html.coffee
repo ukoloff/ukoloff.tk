@@ -28,74 +28,74 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
             li -> a
               href: "https://github.com/ukoloff"
               -> i class: 'fa fa-github'
-              "GitHub"
+              " GitHub"
             li -> a
               href: "https://rubygems.org/profiles/ukoloff"
               -> i class: 'fa fa-diamond'
-              "RubyGems"
+              " RubyGems"
             li -> a
               href: "https://www.npmjs.com/~ukoloff"
               -> i class: 'fa fa-spinner fa-spin'
-              "NPM"
+              " NPM"
         li class: "dropdown", ->
           a
             href: "#"
             class: "dropdown-toggle"
             data: toggle: "dropdown"
             role: "button"
-            "Projects"
+            " Projects"
             -> span class: "caret"
           ul class: "dropdown-menu", role: "menu", ->
             li
               role: "presentation"
               class: "dropdown-header"
               -> i class: 'fa fa-bicycle'
-              "JavaScript"
+              " JavaScript"
             li -> a
               href: "http://coffee.ukoloff.tk/"
               -> i class: 'fa fa-coffee'
-              "Online Coffee compiler & minifier"
+              " Online Coffee compiler & minifier"
             li -> a
               href: "https://github.com/ukoloff/without"
               -> i class: 'fa fa-file-word-o'
-              "WithOut template engine"
+              " WithOut template engine"
             li -> a
               href: "/bkrs/"
               -> i class: 'fa fa-book'
-              "BKRS 2 DSL & Dictan converter"
+              " BKRS 2 DSL & Dictan converter"
             li class: "divider"
             li
               role: "presentation"
               class: "dropdown-header"
               -> i class: 'fa fa-truck'
-              "Ruby"
+              " Ruby"
             li -> a
               href: "https://github.com/ukoloff/em-wssh"
               -> i class: 'fa fa-random'
-              "Proxy SSH thru nginx"
+              " Proxy SSH thru nginx"
             li -> a
               href: "https://github.com/ukoloff/assets-watchify"
               -> i class: 'fa fa-cogs'
-              "Watchify for Rails"
+              " Watchify for Rails"
             li -> a
               href: "https://github.com/ukoloff/execjs-xtrn"
               -> i class: 'fa fa-cubes'
-              "JavaScript engine"
+              " JavaScript engine"
             li -> a
               href: "https://github.com/ukoloff/openssl-win-root"
               -> i class: 'fa fa-certificate'
-              "Root Certificates on Windows"
+              " Root Certificates on Windows"
             li class: "divider"
             li
               role: "presentation"
               class: "dropdown-header"
               -> i class: 'fa fa-moon-o'
-              "Lua @ Ruby"
+              " Lua @ Ruby"
             li -> a
               href: "https://github.com/ukoloff/rufus-lua-win"
               -> i class: 'fa fa-windows'
-              "Rufus::Lua::Win"
+              " Rufus::Lua::Win"
             li -> a
               href: "https://github.com/ukoloff/rufus-lua-moon"
               -> i class: 'fa fa-file-code-o'
-              "Rufus::Lua::Moon"
+              " Rufus::Lua::Moon"
