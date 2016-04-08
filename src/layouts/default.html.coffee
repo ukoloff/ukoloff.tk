@@ -12,7 +12,10 @@ html ->
       @add ["/the.css"]
     Block "scripts"
   body ->
+    raw @partial "navbar"
+
     div class: 'container-fluid', ->
       h1 @document.title
       raw @content
+
    raw @partial "footer"
