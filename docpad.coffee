@@ -20,3 +20,6 @@
     fonts:
       src: '../node_modules/font-awesome/fonts'
       out: 'fonts'
+  webpack:
+    entry:
+      the: './the'

@@ -10,7 +10,8 @@ html ->
     Block "meta"
     Block "styles", ->
       @add ["/the.css"]
-    Block "scripts"
+    Block "scripts", ->
+      @add ["/the.js"]
   body ->
     raw @partial "navbar"
 
