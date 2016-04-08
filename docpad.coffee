@@ -1,7 +1,13 @@
 # DocPad Configuration File
 # http://docpad.org/docs/config
 
-#@poweredByDocPad = false
+# @poweredByDocPad = false
+
+@collections =
+  _html: ->
+    @getCollection "html"
+    .on "add", (model) ->
+      model.setMetaDefaults layout:"default"
 
 @plugins =
   less:
