@@ -15,3 +15,4 @@ html ->
     div class: 'container-fluid', ->
       h1 @document.title
       raw @content
+   raw @partial "footer"
