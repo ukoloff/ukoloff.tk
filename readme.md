@@ -10,7 +10,7 @@ First, this site was hosted on GitHub Pages using Jekyll.
 But since I personally prefer JavaScript to Ruby I was happy
 to switch to DocPad. Her it is!
 
-Old version is in [jekyll](tree/jekyll/) branch.
+Old version is in [jekyll](../../tree/jekyll/) branch.
 
 ## Credits
 
