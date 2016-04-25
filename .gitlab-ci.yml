@@ -1,0 +1,17 @@
+image: node
+
+cache:
+  paths:
+  - node_modules/
+
+pages:
+  before_script:
+  - npm install --production
+  script:
+  - node_modules/.bin/docpad generate --env=static
+  - mv out public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
