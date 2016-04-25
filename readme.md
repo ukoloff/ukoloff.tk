@@ -15,12 +15,13 @@ Old version is in [jekyll](../../tree/jekyll/) branch.
 ## Credits
 
   * [GitHub](https://github.com/) itself
-  * [GitHub Pages](https://pages.github.com/)
+    + [GitHub Pages](https://pages.github.com/)
+  * [GitLab](https://gitlab.com/)
   * [Jekyll](https://jekyllrb.com/)
-  * [Ruby](https://www.ruby-lang.org/)
+    + [Ruby](https://www.ruby-lang.org/)
   * [DocPad](http://docpad.org/)
     + [Deploy guide](http://docpad.org/docs/deploy/)
-  * [Node.js](https://nodejs.org/)
+    + [Node.js](https://nodejs.org/)
   * [jQuery](https://jquery.com/)
   * [Bootstrap](http://getbootstrap.com/)
     + [Bootswatch](http://bootswatch.com/)
