@@ -34,5 +34,7 @@ title: БКРС
   * [Исходный код конвертера](https://github.com/ukoloff/bkrs)
   * [БКРС](http://bkrs.info/) - исходные данные для словаря
   * [GoldenDict](http://goldendict.org/) -  словарь с поддержкой формата DSL/LSD (от Lingvo)
+    + GoldenDict [@Android](https://play.google.com/store/apps/details?id=mobi.goldendict.android)
+    + GoldenDict @Android [Бесплатная версия](https://play.google.com/store/apps/details?id=mobi.goldendict.android.free) - как раз для БКРС :-)
   * [Dictan](http://www.softex.info/) - словарь с поддержкой форматов zd/fdb/fdl (самодельных)
   * [AppVeyor](http://www.appveyor.com/) - Continuous Delivery для Windows
