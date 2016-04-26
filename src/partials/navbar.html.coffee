@@ -69,6 +69,10 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
               href: "/bkrs/"
               -> fa 'book'
               "BKRS 2 DSL & Dictan converter"
+            li -> a
+              href: 'https://github.com/ukoloff/valid-8'
+              -> fa 'language'
+              "UTF-8 validator"
             li class: "divider"
             li
               role: "presentation"
@@ -91,6 +95,10 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
               href: "https://github.com/ukoloff/openssl-win-root"
               -> fa 'certificate'
               "Root Certificates on Windows"
+            li -> a
+              href: 'https://github.com/ukoloff/appveyor-worker'
+              -> fa 'binoculars'
+              "AppVeyor reporting"
             li class: "divider"
             li
               role: "presentation"
