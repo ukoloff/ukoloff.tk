@@ -36,6 +36,10 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
               -> fa 'github'
               "GitHub"
             li -> a
+              href: "https://bitbucket.org/ukoloff/"
+              -> fa 'bitbucket'
+              "Bitbucket"
+            li -> a
               href: "https://gitlab.com/u/ukoloff/projects"
               -> fa 'gitlab'
               "GitLab"
