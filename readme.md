@@ -1,6 +1,7 @@
 # ukoloff.tk
 
 [![Build Status](https://travis-ci.org/ukoloff/ukoloff.tk.svg?branch=master)](https://travis-ci.org/ukoloff/ukoloff.tk)
+[![build status](https://gitlab.com/ukoloff/ukoloff.gitlab.io/badges/master/build.svg)](https://gitlab.com/ukoloff/ukoloff.gitlab.io/commits/master)
 
 Personal site using DocPad.
 
