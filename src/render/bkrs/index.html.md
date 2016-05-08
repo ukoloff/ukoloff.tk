@@ -23,11 +23,12 @@ title: БКРС
 
 ## Скачать
   * [bkrs.zd](https://ci.appveyor.com/api/projects/ukoloff/bkrs/artifacts/bkrs.zd) -
-  для Dictan
-  * [bkrs.zip](https://ci.appveyor.com/api/projects/ukoloff/bkrs/artifacts/bkrs.zip) -
-  для GoldenDict
-  * [bkrs-min.zip](https://ci.appveyor.com/api/projects/ukoloff/bkrs/artifacts/bkrs-min.zip) -
-  для GoldenDict на Adroid (упаковано при помощи dictzip)
+    для Dictan
+  * [bkrs.zip](https://ci.appveyor.com/api/projects/ukoloff/bkrs/artifacts/bkrs.zip)
+    ([зеркало](http://ukoloff.gitlab.io/bkrs/bkrs.zip)) - для GoldenDict
+  * [bkrs-min.zip](https://ci.appveyor.com/api/projects/ukoloff/bkrs/artifacts/bkrs-min.zip)
+    ([зеркало](http://ukoloff.gitlab.io/bkrs/bkrs-min.zip)) - для
+    GoldenDict на Android (упаковано при помощи dictzip)
 
 ## Ссылки
 
@@ -38,3 +39,4 @@ title: БКРС
     + GoldenDict @Android [Бесплатная версия](https://play.google.com/store/apps/details?id=mobi.goldendict.android.free) - как раз для БКРС :-)
   * [Dictan](http://www.softex.info/) - словарь с поддержкой форматов zd/fdb/fdl (самодельных)
   * [AppVeyor](http://www.appveyor.com/) - Continuous Delivery для Windows
+  * [GitLab](https://gitlab.com/) - Code, test, and deploy together
