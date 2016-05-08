@@ -6,6 +6,7 @@ cache:
 
 pages:
   before_script:
+  - NPM_CONFIG_LOGLEVEL=warn
   - npm install --production
   script:
   - node_modules/.bin/docpad generate --env=static
