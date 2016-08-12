@@ -82,6 +82,10 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
               href: 'https://github.com/ukoloff/valid-8'
               -> fa 'language'
               "UTF-8 validator"
+            li -> a
+              href: 'https://github.com/ukoloff/nvms'
+              -> fa 'plug'
+              "NVM for M$ Windows"
             li class: "divider"
             li
               role: "presentation"
