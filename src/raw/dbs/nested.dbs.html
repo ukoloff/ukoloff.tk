@@ -1,12 +1,61 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <style>
-body{margin:0}svg{box-sizing:border-box}path{fill:#0f0;stroke:#f00;stroke-width:.2%;fill-rule:nonzero;stroke-linejoin:round;}path:hover{fill:#ff0;stroke-dasharray:1%;animation:dash 1s linear infinite}@keyframes dash{from{stroke-dashoffset:0%}to{stroke-dashoffset:-2%}}
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100;
+  box-sizing: border-box;
+  padding: 1ex;
+}
+path {
+  fill: url("#diagonalHatch");
+  stroke: #000;
+  stroke-width: 0.16%;
+  fill-rule: nonzero;
+  stroke-linejoin: round;
+}
+path:hover {
+  fill: #f0f;
+  stroke-dasharray: 1%;
+  animation: dash 1s linear infinite;
+}
+path:first-of-type {
+  fill: url("#antiDiagonalHatch");
+}
+path:first-of-type:hover {
+  fill: #0f0;
+}
+pattern rect {
+  stroke: none;
+}
+#diagonalHatch {
+  stroke: #000;
+  fill: #c0c0c0;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0%;
+  }
+  to {
+    stroke-dashoffset: -2%;
+  }
+}
+
 </style>
 </head>
 <body>
 <svg height="100%" width="100%" viewBox="0 -2000 5000 2000"><g transform = "scale(1, -1)">
+<defs>
+  <pattern id="diagonalHatch" width="1em" height="1em" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="1em" height="1em" />
+    <line x1="0" y1="0" x2="0" y2="1em" />
+  </pattern>
+  <pattern id="antiDiagonalHatch" href="#diagonalHatch" patternTransform="rotate(-45)" />
+</defs>
 <path name="LIST" d="M 0 0
 V 2000
 H 5000
