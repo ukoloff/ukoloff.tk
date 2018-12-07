@@ -41,8 +41,8 @@ title: Материалы к курсу "Структуры и алгоритм�
 - [Видео](video)
     * [Видеоуроки по C++](video/c++)
 - [Фрагменты кода](https://gist.github.com/ukoloff/16b8ac6f927e01513458755fc092cc98)
+- [Вопросы к экзамену](exam/)
 
 [books]: https://yadi.sk/d/tYbqVP6qyhaCvg
-
 [qsort]: https://gitlab.com/snippets/1774228
 [sort3]: https://gitlab.com/snippets/1780907
