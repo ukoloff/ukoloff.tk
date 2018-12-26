@@ -12,3 +12,6 @@ node_modules
 # Jekyll folders
 _site/
 .sass-cache/
+
+# M$ Word
+~*
