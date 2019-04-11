@@ -67,6 +67,14 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
               -> fa 'bicycle'
               "JavaScript"
             li -> a
+              href: "https://github.com/ukoloff/win-ca"
+              -> fa 'certificate'
+              "Root Certificates on Windows"
+            li -> a
+              href: 'https://github.com/ukoloff/nvms'
+              -> fa 'plug'
+              "NVM for M$ Windows"
+            li -> a
               href: "http://coffee.ukoloff.tk/"
               -> fa 'coffee'
               "Online Coffee compiler & minifier"
@@ -83,9 +91,9 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
               -> fa 'language'
               "UTF-8 validator"
             li -> a
-              href: 'https://github.com/ukoloff/nvms'
-              -> fa 'plug'
-              "NVM for M$ Windows"
+              href: 'https://github.com/ukoloff/appveyor-mocha'
+              -> fa 'binoculars'
+              "AppVeyor reporting fro mocha"
             li class: "divider"
             li
               role: "presentation"
