@@ -1,0 +1,92 @@
+<!DOCTYPE html><html><head><title>Теория языков программирования и методы трансляции</title><meta name="generator" content="DocPad v6.78.6" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link  rel="stylesheet" href="/the.css" /><script defer="defer"  src="/the.js"></script></head><body><nav class="navbar navbar-inverse navbar-static-top"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">Hello!</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">@Net<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="https://github.com/ukoloff"><i class="fa fa-github"></i> GitHub</a></li><li><a href="https://bitbucket.org/ukoloff/"><i class="fa fa-bitbucket"></i> Bitbucket</a></li><li><a href="https://gitlab.com/u/ukoloff/projects"><i class="fa fa-gitlab"></i> GitLab</a></li><li class="divider"></li><li><a href="https://rubygems.org/profiles/ukoloff"><i class="fa fa-diamond"></i> RubyGems</a></li><li><a href="https://www.npmjs.com/~ukoloff"><i class="fa fa-spinner fa-spin"></i> NPM</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li role="presentation" class="dropdown-header"><i class="fa fa-bicycle"></i> JavaScript</li><li><a href="https://github.com/ukoloff/win-ca"><i class="fa fa-certificate"></i> Root Certificates on Windows</a></li><li><a href="https://github.com/ukoloff/nvms"><i class="fa fa-plug"></i> NVM for M$ Windows</a></li><li><a href="http://coffee.ukoloff.tk/"><i class="fa fa-coffee"></i> Online Coffee compiler &amp; minifier</a></li><li><a href="https://github.com/ukoloff/without"><i class="fa fa-file-word-o"></i> WithOut template engine</a></li><li><a href="/bkrs/"><i class="fa fa-book"></i> BKRS 2 DSL &amp; Dictan converter</a></li><li><a href="https://github.com/ukoloff/valid-8"><i class="fa fa-language"></i> UTF-8 validator</a></li><li><a href="https://github.com/ukoloff/appveyor-mocha"><i class="fa fa-binoculars"></i> AppVeyor reporting for mocha</a></li><li class="divider"></li><li role="presentation" class="dropdown-header"><i class="fa fa-truck"></i> Ruby</li><li><a href="https://github.com/ukoloff/em-wssh"><i class="fa fa-random"></i> Proxy SSH thru nginx</a></li><li><a href="https://github.com/ukoloff/assets-watchify"><i class="fa fa-cogs"></i> Watchify for Rails</a></li><li><a href="https://github.com/ukoloff/execjs-xtrn"><i class="fa fa-cubes"></i> JavaScript engine</a></li><li><a href="https://github.com/ukoloff/openssl-win-root"><i class="fa fa-certificate"></i> Root Certificates on Windows</a></li><li><a href="https://github.com/ukoloff/appveyor-worker"><i class="fa fa-binoculars"></i> AppVeyor reporting</a></li><li class="divider"></li><li role="presentation" class="dropdown-header"><i class="fa fa-moon-o"></i> Lua @ Ruby</li><li><a href="https://github.com/ukoloff/rufus-lua-win"><i class="fa fa-windows"></i> Rufus::Lua::Win</a></li><li><a href="https://github.com/ukoloff/rufus-lua-moon"><i class="fa fa-file-code-o"></i> Rufus::Lua::Moon</a></li></ul></li></ul></div></div></nav><div class="container-fluid"><h1>Теория языков программирования и методы трансляции</h1><h2 id="-">Домашняя работа</h2>
+<p>Требуется написать программу,
+которая принимает на входе строку
+вида <code>2+3*4/(5-6)</code>,
+вычисляет полученное выражение
+и выводит результат
+(в данном случае: <code>-10</code>).</p>
+<p>Выражения состоят из:</p>
+<ul>
+<li>Целых десятичных чисел (<code>42</code>, <code>108</code>, <code>666</code>...)</li>
+<li>Скобок (<code>(</code> и <code>)</code>)</li>
+<li>Арифметических операций:<ul>
+<li>Унарные <code>+</code> и <code>-</code> (например: <code>+3</code>, <code>-5</code>)</li>
+<li>Бинарные <code>*</code> и <code>/</code> (умножение и деление, например: <code>6*7</code> или <code>1/2</code>)</li>
+<li>Бинарные <code>+</code> и <code>-</code> (сложение и вычитание, например: <code>1+1</code>, <code>10-20</code>)</li>
+</ul>
+</li>
+</ul>
+<p>Хотя числа в выражении целые,
+результат может быть вещественным числом,
+и так его и надо выводить
+(<code>1/2</code> &rarr; <code>0.5</code>).
+Арифметические ошибки можно игнорировать.</p>
+<p>В случае,
+если выражение неправильное (<code>1+</code>),
+следует вывести вместо числа сообщение об ошибке
+<code># ERROR</code>.</p>
+<p>Использовать можно любой язык программирования
+(C, C++, Java, JavScript, Pascal, Python...),
+однако запрещено использовать функции типа <code>eval</code>.</p>
+<p>Текста программы недостаточно,
+программа должна запускаться и работать.
+Рекомендуется
+размещать
+(и даже разрабатывать)
+программу на сайте
+<a href="https://repl.it/">https://repl.it/</a>
+(и лучше там зарегистрироваться)
+или аналогичных.
+Присылайте ссылку на работающее решение на почту.</p>
+<h3 id="-">Варианты</h3>
+<p>Каждый студент получает индивидуальное задание,
+усложняющее вышеописанную постановку.
+Его можно выбрать самому,
+при условии,
+что у разных студентов набор дополнений разный.
+Выбрать можно любые две строки
+(или больше при желании)
+из следующего списка:</p>
+<ol>
+<li>Вещественные числа (<code>3.14e+00</code>, дробная часть или степень необязательны)</li>
+<li>Разные скобки (кроме <code>()</code> ещё <code>[]</code>, <code>{}</code> и <code>&lt;&gt;</code>), но скобки должны быть строго сбалансированы (<code>(2+3]</code> &rarr; ошибка)</li>
+<li>Дополнительные операции<ol>
+<li>Факториал <code>!</code> (<code>5!</code> &rarr; <code>120</code>)</li>
+<li>Возведение в степень <code>^</code> или <code>**</code>. Обратите внимание, что (<code>2^3^2</code> &rarr; <code>512</code>, а не <code>64</code>)<ul>
+<li>Только <code>^</code></li>
+<li>Только <code>**</code></li>
+<li>И <code>^</code> и <code>**</code></li>
+</ul>
+</li>
+<li>Максимум и минимум <code>?&gt;</code> и <code>?&lt;</code> (<code>2 ?&gt; 3</code> &rarr; <code>3</code>)</li>
+<li>Тернарная операция <code>? :</code> (<code>1 ? 2 : 3</code> &rarr; <code>2</code>, а <code>0 ? 2 : 3</code> &rarr; <code>3</code>)</li>
+</ol>
+</li>
+<li>Идентификаторы (<code>word123</code>)<ol>
+<li>Семантика<ul>
+<li>Константы <code>e</code> и <code>pi</code></li>
+<li>Функции одного аргумента (<code>sqrt()</code>, <code>sin()</code>, <code>cos()</code>, <code>tg()</code>, <code>ln()</code>, <code>lg()</code> и т.п., на свой вкус)</li>
+</ul>
+</li>
+<li>Регистр<ul>
+<li>Важен (<code>e</code> &rarr; <code>2.718</code>, но <code>E</code> &rarr; ошибка)</li>
+<li>Не важен (<code>e</code> &rarr; <code>2.718</code>, и <code>E</code> &rarr; <code>2.718</code>)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Пробельные символы<ol>
+<li>Операнды могут разделяться пробелами и знаками табуляции <code>\t</code>, внутри чисел (и идентификаторов) пробелы недопустимы (например <code>1 + 2</code> но не <code>12 34</code>)</li>
+<li>Комментарии<ul>
+<li>В Unix-стиле: от <code>#</code> или <code>;</code> до конца строки</li>
+<li>В C-стиле: от <code>//</code> (но не <code>/ /</code>) до конца строки</li>
+<li>&quot;Многострочные&quot;: от <code>/*</code> до <code>*/</code>, могут быть в середине строки (и несколько раз)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Сообщения об ошибках: выводить номер позиции и осмысленный текст ошибки (например <code>1 $ 2</code> &rarr; <code># Недопустимый символ в поз. 3</code>), язык любой (русский, английский...)</li>
+<li>Прочее. Идеи приветствуются</li>
+</ol>
+<h3 id="that-s-all-folks-">That&#39;s all folks!</h3>
+</div><footer class="container-fluid"><hr><small>&copy; Stas Ukolov, 2016 - 2019</small></footer></body></html>
