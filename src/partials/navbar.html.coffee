@@ -93,7 +93,7 @@ nav class: "navbar navbar-inverse navbar-static-top", ->
             li -> a
               href: 'https://github.com/ukoloff/appveyor-mocha'
               -> fa 'binoculars'
-              "AppVeyor reporting fro mocha"
+              "AppVeyor reporting for mocha"
             li class: "divider"
             li
               role: "presentation"
