@@ -2,7 +2,6 @@
 # http://docpad.org/docs/config
 
 # @poweredByDocPad = false
-copy = require './plugins/copy'
 
 @collections =
   entitled: ->
@@ -11,7 +10,7 @@ copy = require './plugins/copy'
     .on "add", (model) ->
       model.setMetaDefaults layout:"default"
 
-# @plugins =
+ @plugins =
 #   less:
 #     parseOptions:
 #       paths: "#{__dirname}/node_modules"
@@ -24,9 +23,7 @@ copy = require './plugins/copy'
 #   webpack:
 #     entry:
 #       the: './the'
-
-@events =
-  writeAfter: copy
+  assets:
     raw:
       src: 'raw'
     fonts:
