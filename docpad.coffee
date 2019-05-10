@@ -27,6 +27,8 @@ copy = require './plugins/copy'
 
 @events =
   writeAfter: copy
+    raw:
+      src: 'raw'
     fonts:
       src:
         module: 'font-awesome'

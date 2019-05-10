@@ -2,7 +2,7 @@
 path = require 'path'
 fs = require 'fs-extra'
 
-module.exports = (files)-> (opts, done)->
+module.exports = (files)-> (opts)->
   cfg =  @docpad.config
   src = cfg.srcPath
   dst = cfg.outPath
@@ -11,11 +11,15 @@ module.exports = (files)-> (opts, done)->
   wait4 = []
 
   for k, group of files
-    fromFolder = path.join '',
-      require.resolve "#{group.src.module}/package"
-      '..'
-      group.src.extra or ''
-    toFolder = path.join dst, group.dst
+    fromFolder = if group.src?.module
+      path.join '',
+        require.resolve "#{group.src.module}/package"
+        '..'
+        group.src.extra or ''
+    else
+      group.src
+    fromFolder = path.resolve src, fromFolder
+    toFolder = path.join dst, group.dst || ''
     fs.mkdirp toFolder
     .catch ->
     wait4.push fs.copy fromFolder,
@@ -23,11 +27,8 @@ module.exports = (files)-> (opts, done)->
       filter: makeFilter group.src.file
 
   Promise.all wait4
-  .then ->
-    done()
   .catch (error)->
-    console.log 'OOPS', error
-    process.exit 1
+    throw error
 
 makeFilter = (file)->
   if file
