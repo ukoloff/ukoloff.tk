@@ -15,9 +15,9 @@ html ->
       name: "viewport"
       content: "width=device-width, initial-scale=1"
     Block "styles", ->
-      @add ["/the.css"]
+      @add ["/css/flatly/bootstrap.min.css", "/css/font-awesome.min.css"]
     Block "scripts", ->
-      @add ["/the.js"]
+      @add ["/js/jquery.min.js", "/js/bootstrap.min.js"]
   body ->
     raw @partial "navbar"
 
