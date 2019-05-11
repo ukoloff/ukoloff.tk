@@ -38,6 +38,8 @@ module.exports = (base)->
 makeFilter = (file)->
   if file
     (src, dst)->
+      if /(?:.*\bnode_modules\b){2}/.test src
+        return false
       fs.stat src
       .then (stat)->
         stat.isDirectory() or file == path.basename src
