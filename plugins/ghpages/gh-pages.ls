@@ -13,7 +13,7 @@ if process.env.TRAVIS_TAG or
 
 fs.empty-dir-sync repo = path.join __dirname, \../../tmp/www
 
-title = spawn \git <[ log -1 --format=%h\t%s ]>
+title = spawn \git <[ log -1 --format=%h:\t%s ]>
   .stdout
   .to-string!trim!
 
