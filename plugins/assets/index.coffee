@@ -5,7 +5,7 @@ module.exports = (base)->
   base.extend
     name: 'assets'
 
-    writeAfter: (opts)->
+    writeAfter: (opts, done)->
       cfg =  @docpad.getConfig()
       src = cfg.srcPath
       dst = cfg.outPath
@@ -30,6 +30,8 @@ module.exports = (base)->
           filter: makeFilter group.src.file
 
       Promise.all wait4
+      .then ->
+        do done
       .catch (error)->
         throw error
 

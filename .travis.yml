@@ -1,19 +1,18 @@
 sudo: false
-git:
-  depth: 3
+
 branches:
   only:
-  - master
+  - upgrade
+
 language: node_js
-node_js:
-- node
+
 cache:
   directories:
   - node_modules
-before_script:
-- npm prune
-- npm dedupe
-after_success: script/github
+
+after_success:
+  - script/github
+
 env:
   global:
   - DEPLOY_NAME="Travis CI Deployer"
