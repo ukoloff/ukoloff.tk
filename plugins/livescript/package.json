@@ -1,0 +1,9 @@
+{
+  "name": "livescript",
+  "version": "2.0.0",
+  "main": ".",
+  "keywords": [
+    "docpad",
+    "docpad-plugin"
+  ]
+}
