@@ -7,7 +7,8 @@ module.exports = ->
 
 function render(options)
   if \ls == options.in-extension and \html == options.out-extension
-    options.content = options.template-data
-      |> without new Function livescript.compile do
-        options.content
-        bare: true
+    t = without new Function livescript.compile do
+      options.content
+      bare: true
+    t.$ = @get-config!$
+    options.content = t options.template-data

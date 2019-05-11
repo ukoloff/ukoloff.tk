@@ -23,6 +23,8 @@ exports.plugins =
 #   webpack:
 #     entry:
 #       the: './the'
+  livescript:
+    $: {require}
   assets:
     raw:
       src: \raw
