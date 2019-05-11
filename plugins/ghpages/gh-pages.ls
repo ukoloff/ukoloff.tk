@@ -38,7 +38,7 @@ git \push
 
 # Push to GitHub
 if (user = process.env.DEPLOY_USER) and
-   (token = process.env.$DEPLOY_TOKEN) and
+   (token = process.env.DEPLOY_TOKEN) and
    (slug = process.env.TRAVIS_REPO_SLUG)
   git <[ remote add github ]>.concat "https://#{user}:#{token}@github.com/#{slug}.git"
   git <[ push github ]>.concat branch
