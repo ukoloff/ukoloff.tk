@@ -4,6 +4,9 @@ branches:
   only:
   - upgrade
 
+git:
+  depth: false
+
 language: node_js
 node_js:
   - 8
