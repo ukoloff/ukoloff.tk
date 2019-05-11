@@ -5,10 +5,17 @@ branches:
   - upgrade
 
 language: node_js
+node_js:
+  - 8
 
 cache:
   directories:
   - node_modules
+
+before_script:
+- npm prune
+- npm dedupe
+- npm ls
 
 after_success:
   - script/github
