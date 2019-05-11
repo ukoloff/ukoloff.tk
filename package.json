@@ -31,11 +31,11 @@
     "docpad": "~6.79.4",
     "docpad-plugin-marked": "^2.3.0",
     "docpad-plugin-partials": "~2.9.2",
-    "docpad-plugin-without": "~2.1.0",
     "font-awesome": "^4.7.0",
     "fs-extra": "^7.0.1",
     "jquery": "^3.4.1",
-    "livescript": "^1.6.0"
+    "livescript": "^1.6.0",
+    "without": "^1.2.3"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "^2.10.0"
