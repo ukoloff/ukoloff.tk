@@ -16,7 +16,6 @@ cache:
   - node_modules
 
 after_success:
-  - git branch www origin/www
   - node plugins/ghpages
 
 env:

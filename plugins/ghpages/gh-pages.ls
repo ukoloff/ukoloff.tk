@@ -17,6 +17,9 @@ title = spawn \git <[ log -1 --format=%h:\t%s ]>
   .stdout
   .to-string!trim!
 
+# Create branch if absent
+spawn \git [\branch branch, "origin/#{branch}"]
+
 # Init temporary repo
 git "clone ../.. . -b #{branch}"
 for k, v of author
