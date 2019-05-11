@@ -26,8 +26,6 @@ exports.plugins =
   livescript:
     $: {require}
   assets:
-    raw:
-      src: \raw
     fonts:
       src:
         module: \font-awesome
