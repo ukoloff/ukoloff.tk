@@ -2,6 +2,12 @@
 # http://docpad.org/docs/config
 
 # @poweredByDocPad = false
+require! <[ path ]>
+
+exports.plugin-paths = <[
+  assets
+  livescript
+]>.map -> path.join __dirname, "docpad-plugin-#{it}"
 
 exports.collections =
   entitled: ->

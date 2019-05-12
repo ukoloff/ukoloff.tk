@@ -1,9 +1,10 @@
 require! <[ path fs-extra ]>
 
 module.exports = ->
-  it.extend do
-    name: \assets
-    write-after: write-after
+  extend it
+    ..::<<<
+      name: \assets
+      write-after: write-after
 
 function write-after(opts, done)
   cfg =  @docpad.get-config!
@@ -53,3 +54,6 @@ function write-after(opts, done)
 
 function always
   true
+
+function extend(base)
+  ``class Assets extends base{}``

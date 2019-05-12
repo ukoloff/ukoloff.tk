@@ -1,9 +1,13 @@
 require! <[ livescript without ]>
 
 module.exports = ->
-  it.extend do
-    name: \livescript
-    render: render
+  extend it
+    ..::<<<
+      name: \livescript
+      render: render
+
+function extend(base)
+  ``class LiveScript extends base{}``
 
 function render(options)
   if \ls == options.in-extension and \html == options.out-extension
