@@ -136,3 +136,18 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
               href: \https://github.com/ukoloff/rufus-lua-moon
               !-> fa \file-code-o
               \Rufus::Lua::Moon
+      ul class: "nav navbar-nav navbar-right", !->
+        li class: \dropdown, !->
+          a do
+            href: \#
+            class: \dropdown-toggle
+            data: toggle: \dropdown
+            role: \button
+            !-> fa \wrench
+            \Setup
+            !-> span class: \caret
+          ul class: \dropdown-menu, role: \menu, !->
+            li !-> a do
+              href: \/theme
+              !-> fa \eye
+              \Themes

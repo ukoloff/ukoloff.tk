@@ -13,14 +13,13 @@ for f in fs.readdir-sync folder
       themes.push f
       break
 
-div do
+form do
   class: \text-center
   !->
     for theme in themes.sort!
-      label !->
+      label class: \radio-inline, !->
         input do
           type: \radio
           name: \theme
           value: theme
         text theme
-      text ' '
