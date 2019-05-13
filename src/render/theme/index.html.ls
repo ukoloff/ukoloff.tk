@@ -23,3 +23,22 @@ form do
           name: \theme
           value: theme
         text theme
+    p!
+    button do
+      class: 'btn btn-success'
+      type: \submit
+      !-> i class: 'fa fa-save'
+      ' '
+      \Save
+    text ' '
+    button do
+      class: 'btn btn-danger'
+      type: \button
+      !-> i class: 'fa fa-undo'
+      ' '
+      \Cancel
+coffeescript !->
+  for el in document.forms[0] when \BUTTON == el.tag-name
+    el.onclick = ->
+      history.back!
+      false
