@@ -60,3 +60,6 @@ exports.plugins =
         module: \bootswatch
         file: \bootstrap.min.css
       dst: \css
+  serve:
+    listen-options:
+      host: \localhost
