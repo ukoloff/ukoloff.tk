@@ -49,12 +49,6 @@ exports.plugins =
         extra: \dist
         file: \jquery.min.js
       dst: \js
-    bootstrap:
-      src:
-        module: \bootstrap
-        extra: \dist/js
-        file: \bootstrap.min.js
-      dst: \js
     bootstrap-native:
       src:
         module: \bootstrap.native
