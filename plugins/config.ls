@@ -55,6 +55,12 @@ exports.plugins =
         extra: \dist/js
         file: \bootstrap.min.js
       dst: \js
+    bootstrap-native:
+      src:
+        module: \bootstrap.native
+        extra: \dist
+        file: <[ bootstrap-native.min.js polyfill.min.js ]>
+      dst: \js
     themes:
       src:
         module: \bootswatch
