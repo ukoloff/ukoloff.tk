@@ -18,7 +18,7 @@ html !->
     Block \styles ->
       @add <[ /css/flatly/bootstrap.min.css /css/font-awesome.min.css ]>
     Block \scripts ->
-      @add <[ /js/jquery.min.js /js/bootstrap.min.js ]>
+      @add <[ /js/polyfill.min.js /js/bootstrap-native.min.js ]>
   body !->
     raw @partial \navbar
 

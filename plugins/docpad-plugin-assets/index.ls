@@ -42,6 +42,9 @@ function write-after(opts, done)
 
 !function make-filter(file)
   return if file
+    unless Array.is-array file
+      file = [file]
+    file = new Set file
     filter
   else
     always
@@ -50,7 +53,7 @@ function write-after(opts, done)
     unless /(?:.*\bnode_modules\b){2}/.test src
       fs-extra.stat src
       .then ->
-        it.isDirectory! or file == path.basename src
+        it.isDirectory! or file.has path.basename src
 
 function always
   true
