@@ -43,12 +43,6 @@ exports.plugins =
         extra: \css
         file: \font-awesome.min.css
       dst: \css
-    $:
-      src:
-        module: \jquery
-        extra: \dist
-        file: \jquery.min.js
-      dst: \js
     bootstrap-native:
       src:
         module: \bootstrap.native
