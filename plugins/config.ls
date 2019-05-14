@@ -7,6 +7,7 @@ require! <[ path ]>
 exports.plugin-paths = <[
   assets
   livescript
+  devserver
 ]>.map -> path.join __dirname, "docpad-plugin-#{it}"
 
 exports.collections =
@@ -54,6 +55,3 @@ exports.plugins =
         module: \bootswatch
         file: \bootstrap.min.css
       dst: \css
-  serve:
-    listen-options:
-      host: \localhost
