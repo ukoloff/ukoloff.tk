@@ -23,7 +23,7 @@ Old version is in [jekyll](../../tree/jekyll/) branch.
   * [DocPad](http://docpad.org/)
     + [Deploy guide](http://docpad.org/docs/deploy/)
     + [Node.js](https://nodejs.org/)
-  * [jQuery](https://jquery.com/)
   * [Bootstrap](http://getbootstrap.com/)
     + [Bootswatch](http://bootswatch.com/)
+    + [Native JavaScript for Bootstrap](https://thednp.github.io/bootstrap.native/)
   * [Font Awesome](http://fontawesome.io/)
