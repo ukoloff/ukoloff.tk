@@ -1,5 +1,6 @@
 ---
 title: Theme
+js: change
 ---
 require! <[ fs path ]>
 

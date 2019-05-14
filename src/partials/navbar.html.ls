@@ -181,6 +181,6 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
             !-> span class: \caret
           ul class: \dropdown-menu, role: \menu, !->
             li !-> a do
-              href: \/theme
+              href: \/theme/
               !-> fa \eye
               \Themes

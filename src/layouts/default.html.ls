@@ -1,4 +1,4 @@
-~function Block(name, fn)
+~!function Block(name, fn)
   z = @get-block name
   if \function == typeof fn
     z = fn.call z
@@ -17,8 +17,14 @@ html !->
       content: "width=device-width, initial-scale=1"
     Block \styles ->
       @add <[ flatly/bootstrap font-awesome ]>.map -> "/css/#{it}.min.css"
+
+    extra-js = @document.meta.js or []
+    unless Array.is-array extra-js
+      extra-js = [extra-js]
     Block \scripts ->
+      @add \/theme/init.js defer: false
       @add <[ polyfill bootstrap-native ]>.map -> "/js/#{it}.min.js"
+      @add extra-js.map -> "#{it}.js"
   body !->
     raw @partial \navbar
 
