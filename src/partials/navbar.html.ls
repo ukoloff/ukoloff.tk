@@ -62,7 +62,7 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
             role: \button
             \Projects
             !-> span class: \caret
-          ul class: \dropdown-menu, role: \menu, !->
+          ul class: "dropdown-menu  dropdown-menu-right", role: \menu, !->
             li class: \dropdown, !->
               a do
                 href: \#
