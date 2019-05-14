@@ -16,9 +16,9 @@ html !->
       name: \viewport
       content: "width=device-width, initial-scale=1"
     Block \styles ->
-      @add <[ /css/flatly/bootstrap.min.css /css/font-awesome.min.css ]>
+      @add <[ flatly/bootstrap font-awesome ]>.map -> "/css/#{it}.min.css"
     Block \scripts ->
-      @add <[ /js/polyfill.min.js /js/bootstrap-native.min.js ]>
+      @add <[ polyfill bootstrap-native ]>.map -> "/js/#{it}.min.js"
   body !->
     raw @partial \navbar
 

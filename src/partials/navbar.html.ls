@@ -1,6 +1,6 @@
 function fa
   classes = \fa
-  for x in arguments  # cannot use ... inside WithOut :-(
+  for x in &  # cannot use ... inside WithOut :-(
     classes += " fa-#{x}"
   i class: classes
   text ' '
