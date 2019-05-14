@@ -38,8 +38,3 @@ form do
       !-> i class: 'fa fa-undo'
       ' '
       \Cancel
-coffeescript !->
-  for el in document.forms[0] when \BUTTON == el.tag-name
-    el.onclick = ->
-      history.back!
-      false

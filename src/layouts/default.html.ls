@@ -16,7 +16,7 @@ html !->
       name: \viewport
       content: "width=device-width, initial-scale=1"
     Block \styles ->
-      @add <[ flatly/bootstrap font-awesome ]>.map -> "/css/#{it}.min.css"
+      @add <[ font-awesome ]>.map -> "/css/#{it}.min.css"
 
     extra-js = @document.meta.js or []
     unless Array.is-array extra-js
