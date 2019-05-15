@@ -22,7 +22,9 @@ function extend(base)
   if \js == options.in-extension and \js == options.out-extension
     params = @get-config!
     delete params.environments
-    z = terser.minify (Math.random!): options.content, params
+    z = terser.minify do
+      "/#{options.file.attributes.relative-path}": options.content
+      params
     if z.error
       throw z.error
     else
