@@ -5,4 +5,4 @@ if (storage)
 if (!theme)
   theme = 'flatly'
 
-document.writeln('<link  rel="stylesheet" href="/css/' + theme + '/bootstrap.min.css" />')
+document.writeln('<link rel="stylesheet" href="/css/' + theme + '/bootstrap.min.css" />')
