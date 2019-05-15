@@ -30,31 +30,32 @@ function active
 
 !function run-after
   if @active!
-    require! <[ path http ws serve-static opener ]>
+    require! <[ path http ws serve-static send opener ]>
     getters =
       serve-static do
-        @docpad.get-config!out-path
+        root = @docpad.get-config!out-path
         dotfiles: \allow
       serve-static do
         path.join __dirname, \public
         extensions: <[ js ]>
 
     @server = http.create-server get
-    .listen listen
-
-  function listen
-    port = @address!port
-    console.log "Point your browser to:" url = "http://localhost:#{port}"
-    opener url
+    .listen !->
+      port = @address!port
+      console.log "Point your browser to:" url = "http://localhost:#{port}"
+      opener url
 
   !function get(req, res)
     i = 0
-    do function attempt
+    do !function attempt
       if i < getters.length
         getters[i++] req, res, attempt
       else
         res.status-code = 404
-        res.end \404
+        send req, \404.html, root: root
+        .on \error !->
+          res.end \404
+        .pipe res
 
 !function docpad-destroy
   console.log \DOCPAD-DESTROY
