@@ -7,6 +7,7 @@ require! <[ path ]>
 exports.plugin-paths = <[
   assets
   livescript
+  terser
   devserver
 ]>.map -> path.join __dirname, "docpad-plugin-#{it}"
 
