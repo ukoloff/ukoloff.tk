@@ -1,8 +1,3 @@
-!function() {
-  var theme, storage = window.localStorage
-  if (storage)
-    theme = storage.theme
-  if (!theme)
-    theme = 'flatly'
-  document.writeln('<link  rel="stylesheet" href="/css/' + theme + '/bootstrap.min.css" />')
-}()
+!function(){var e,t=window.localStorage
+;t&&(e=t.theme),e||(e="flatly"),document.writeln('<link  rel="stylesheet" href="/css/'+e+'/bootstrap.min.css" />')
+}();
