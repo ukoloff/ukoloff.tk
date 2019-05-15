@@ -26,11 +26,15 @@ function active
       .add \/LIVE-RELOAD
 
 !function write-after
-  console.log \WRITE-AFTER
+  @wss?.clients.for-each reload
+
+!function reload(ws)
+  ws.send \reload
 
 !function run-after
   if @active!
     require! <[ path http ws serve-static send opener ]>
+
     getters =
       serve-static do
         root = @docpad.get-config!out-path
@@ -39,11 +43,13 @@ function active
         path.join __dirname, \public
         extensions: <[ js ]>
 
-    @server = http.create-server get
+    @server = server = http.create-server get
     .listen !->
       port = @address!port
       console.log "Point your browser to:" url = "http://localhost:#{port}"
       opener url
+
+    @wss = new ws.Server {server}
 
   !function get(req, res)
     i = 0
@@ -58,5 +64,4 @@ function active
         .pipe res
 
 !function docpad-destroy
-  console.log \DOCPAD-DESTROY
   @server?.close!
