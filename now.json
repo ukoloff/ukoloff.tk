@@ -1,3 +1,13 @@
 {
-  "version": 2
+  "name": "ukoloff",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "out"
+      }
+    }
+  ]
 }

@@ -23,7 +23,8 @@
   },
   "scripts": {
     "start": "docpad run",
-    "test": "docpad generate --env static"
+    "test": "docpad generate --env static",
+    "now-build": "docpad generate --env static"
   },
   "dependencies": {
     "bootstrap.native": "^2.0.26",
