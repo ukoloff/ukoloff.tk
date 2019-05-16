@@ -1,6 +1,7 @@
 {
   "name": "ukoloff",
   "version": 2,
+  "alias": "ukoloff",
   "builds": [
     {
       "src": "package.json",

@@ -27,3 +27,4 @@ Old version is in [jekyll](../../tree/jekyll/) branch.
     + [Bootswatch](http://bootswatch.com/)
     + [Native JavaScript for Bootstrap](https://thednp.github.io/bootstrap.native/)
   * [Font Awesome](http://fontawesome.io/)
+  * [now.sh](https://zeit.co/now)
