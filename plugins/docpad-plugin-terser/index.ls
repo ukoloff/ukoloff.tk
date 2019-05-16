@@ -23,7 +23,7 @@ function extend(base)
     params = @get-config!
     delete params.environments
     z = terser.minify do
-      "/#{options.file.attributes.relative-path}": options.content
+      "/#{options.file.attributes.relative-path.replace /\\/g \/}": options.content
       params
     if z.error
       throw z.error
