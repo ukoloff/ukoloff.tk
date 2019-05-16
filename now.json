@@ -1,0 +1,18 @@
+{
+  "name": "ukoloff",
+  "version": 2,
+  "alias": "ukoloff",
+  "regions": [
+    "arn1",
+    "dub1"
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "out"
+      }
+    }
+  ]
+}
