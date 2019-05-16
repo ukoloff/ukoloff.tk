@@ -1,5 +1,8 @@
 var theme, storage = window.localStorage
 
+if (/\/\w+$/.test(location.pathname)) {
+  location.href += '/'
+}
 if (storage)
   theme = storage.theme
 if (!theme)
