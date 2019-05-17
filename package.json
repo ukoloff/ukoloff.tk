@@ -35,6 +35,7 @@
     "font-awesome": "^4.7.0",
     "fs-extra": "^7.0.1",
     "livescript": "^1.6.0",
+    "metalsmith": "^2.3.0",
     "terser": "^3.17.0",
     "without": "^1.2.3"
   },
