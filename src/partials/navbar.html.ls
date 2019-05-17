@@ -165,10 +165,36 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
                   !-> fa \file-code-o
                   \Rufus::Lua::Moon
             li class: \divider
-            li !-> a do
-              href: \https://github.com/ukoloff/ukoloff.tk
-              !-> fa \code
-              "This site"
+            li class: \dropdown, !->
+              a do
+                href: \#
+                class: \dropdown-toggle
+                data: toggle: \dropdown
+                role: \button
+                !-> fa \html5
+                "This site"
+                !-> span class: \caret
+              ul class: \dropdown-menu, role: \menu, !->
+                li !-> a do
+                  href: \https://github.com/ukoloff/ukoloff.tk
+                  !-> fa \code
+                  "Source code"
+                li class: \divider
+                li !-> a do
+                  href: \http://ukoloff.tk/
+                  !-> fa \github
+                  \@GitHub
+                li !-> a do
+                  href: \http://ukoloff.gitlab.io/
+                  !-> fa \gitlab
+                  \@GitLab
+                li !-> a do
+                  href: \http://ukoloff.now.sh/
+                  !-> fa \clock-o
+                  \@now.sh
+
+
+
       ul class: "nav navbar-nav navbar-right", !->
         li class: \dropdown, !->
           a do
