@@ -1,4 +1,4 @@
-require! <[ livescript ./buf ]>
+require! <[ path livescript ./buf ]>
 
 module.exports = ->
   !function transform(files, metal-smith, done)
@@ -11,11 +11,12 @@ module.exports = ->
           js = livescript.compile do
             file.contents.to-string!
             bare: true
-            map: true
+            map: \embedded
+            filename: path.basename it
           delete files[it]
           file<<<
             contents: buf js.code
-            map: js.map
+            map: JSON.stringify js.map
           files[it.replace /[.][^.]*$/ \.js] = file
         catch e
           error ||:= e
