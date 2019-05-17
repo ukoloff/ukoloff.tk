@@ -1,6 +1,7 @@
 require! {
   path: {extname}
   livescript
+  \./buf
 }
 
 module.exports = ->
@@ -17,12 +18,9 @@ module.exports = ->
             map: true
           delete files[it]
           file<<<
-            contents: buffer-from js.code
+            contents: buf js.code
             map: js.map
-          files[it.replace /.ls$/ \.js] = file
+          files[it.replace /[.][^.]*$/ \.js] = file
         catch e
           error ||:= e
     done error
-
-buffer-from = Buffer.from || ->
-  new Buffer it
