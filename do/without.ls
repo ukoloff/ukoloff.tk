@@ -10,14 +10,12 @@ function plugin(options)
       if /[.]html?[.]js$/i.test it
         try
           file = files[it]
-          t = without new Function file.contents.to-string!
+          args = [].concat file.with-out?.args || [] .join!
+          t = without new Function args, file.contents.to-string!
           t.$ = options.$
-          file.with-out = t
           delete files[it]
-          file<<<
-            contents: buf t file
-            with-out: t
+          file.{}with-out.t = t
           files[it.replace /(?:[.][^.]*){2}$/ \.html] = file
         catch e
-          # error := e
+          error ||:= e
     done error
