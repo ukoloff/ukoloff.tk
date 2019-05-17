@@ -20,7 +20,7 @@ metalsmith path.join __dirname, \..
 .use metalsmith-build-info!
 .use metalsmith-markdown!
 .use livescript!
-.use without $: {require}
+.use without.compile $: {require}
 .use metalsmith-collections do
   partials:
     pattern: \partials/*
@@ -34,6 +34,7 @@ metalsmith path.join __dirname, \..
       draft: true
 .use drafts!
 .use metalsmith-drafts!
+.use without.run!
 .use livescript!
 .use metalsmith-summary.print!
 .build result

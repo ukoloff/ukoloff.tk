@@ -1,8 +1,8 @@
 require! <[ without ./buf ]>
 
-module.exports = plugin
+exports <<< {compile, run}
 
-function plugin(options)
+function compile(options)
   !function transform(files, metal-smith, done)
     var error
     Object.keys files
@@ -16,6 +16,19 @@ function plugin(options)
           delete files[it]
           file.{}with-out.t = t
           files[it.replace /(?:[.][^.]*){2}$/ \.html] = file
+        catch e
+          error ||:= e
+    done error
+
+function run
+  !function transform(files, metal-smith, done)
+    var error
+    Object.keys files
+    .for-each !->
+      file = files[it]
+      if file.with-out?.t
+        try
+          file.contents = buf that file
         catch e
           error ||:= e
     done error
