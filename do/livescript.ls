@@ -1,15 +1,11 @@
-require! {
-  path: {extname}
-  livescript
-  \./buf
-}
+require! <[ livescript ./buf ]>
 
 module.exports = ->
   !function transform(files, metal-smith, done)
     var error
     Object.keys files
     .for-each !->
-      if \.ls == extname it
+      if /[.]ls$/.test it
         try
           file = files[it]
           js = livescript.compile do

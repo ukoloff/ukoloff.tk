@@ -13,6 +13,7 @@ function compile(options)
           args = [].concat file.with-out?.args || [] .join!
           t = without new Function args, file.contents.to-string!
           t.$ = options.$
+          t.id = it
           delete files[it]
           file.{}with-out.t = t
           files[it.replace /(?:[.][^.]*){2}$/ \.html] = file

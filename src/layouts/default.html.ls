@@ -1,7 +1,8 @@
 tag \!DOCTYPE, true <| html: true
 html !->
   head !->
-    title @document.title
+    title @title
+    /*
     Block \meta
     meta do
       \http-equiv : \X-UA-Compatible
@@ -15,11 +16,12 @@ html !->
       @add \/theme/init.js defer: false
       @add <[ polyfill bootstrap-native ]>.map -> "/js/#{it}.min.js"
       @add extra-js!map -> "#{it}.js"
+    */
   body !->
     raw @partial \navbar
 
     div class: \container-fluid, !->
-      h1 @document.title
+      h1 @title
       raw @content
 
     raw @partial \footer

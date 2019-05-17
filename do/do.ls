@@ -9,6 +9,7 @@ require! <[
   ./livescript
   ./without
   ./drafts
+  ./layout
 ]>
 
 metalsmith path.join __dirname, \..
@@ -35,7 +36,9 @@ metalsmith path.join __dirname, \..
 .use drafts!
 .use metalsmith-drafts!
 .use without.run!
-.use livescript!
+.use layout do
+  layout: \default
+  filter: (.title)
 .use metalsmith-summary.print!
 .build result
 
