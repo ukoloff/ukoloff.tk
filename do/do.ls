@@ -2,6 +2,7 @@ require! <[
   path
   metalsmith
   metalsmith-markdown
+  ./livescript
 ]>
 
 metalsmith path.join __dirname, \..
@@ -9,6 +10,7 @@ metalsmith path.join __dirname, \..
 .destination \./out
 .clean true
 .use metalsmith-markdown!
+.use livescript!
 .build result
 
 function result(error)
