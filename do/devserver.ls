@@ -1,4 +1,4 @@
-require! <[ path http ws serve-static send opener ]>
+require! <[ path http ws serve-static send opener chokidar ]>
 
 module.exports = ->
   var started
@@ -23,6 +23,12 @@ module.exports = ->
       console.log "Point your browser to:" url = "http://localhost:#{port}"
       opener url
 
+      chokidar.watch do
+        \.
+        cwd: metal-smith.source!
+        ignore-initial: true
+      .on \all changed
+
     !function get(req, res)
       i = 0
       do !function attempt
@@ -34,3 +40,24 @@ module.exports = ->
           .on \error !->
             res.end \404
           .pipe res
+
+    var rebuilding
+
+    !function changed
+      unless rebuilding
+        rebuilding := new Date
+        set-timeout rebuld, 300
+
+    !function rebuld
+      console.log \Rebuilding: new Date!to-time-string!replace /\s.*/ ''
+      metal-smith
+      .metadata {}
+      .build result
+
+    !function result(error)
+      set-timeout unlock, 100
+      if error
+        console.error \ERROR error
+
+    !function unlock
+      rebuilding := void
