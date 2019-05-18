@@ -6,9 +6,6 @@
     "arn1",
     "dub1"
   ],
-  "github": {
-    "enabled": false
-  },
   "builds": [
     {
       "src": "package.json",
