@@ -1,3 +1,5 @@
-!function(){var e,t=window.localStorage
-;t&&(e=t.theme),e||(e="flatly"),document.writeln('<link rel="stylesheet" href="/css/'+e+'/bootstrap.min.css" />')
+!function(){var t,e
+;e=window.localStorage,/\/\w+$/.test(location.pathname)&&(location.href+="/"),
+e&&(t=e.theme),
+t||(t="flatly"),document.writeln('<link rel="stylesheet" href="/css/'+t+'/bootstrap.min.css" />')
 }();
