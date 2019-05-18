@@ -1,5 +1,5 @@
-!function(){var t,e
-;e=window.localStorage,/\/\w+$/.test(location.pathname)&&(location.href+="/"),
-e&&(t=e.theme),
-t||(t="flatly"),document.writeln('<link rel="stylesheet" href="/css/'+t+'/bootstrap.min.css" />')
+!function(){var e,t
+;t=window.localStorage,/\/\w+$/.test(location.pathname)&&(location.href+="/"),
+t&&(e=t.theme),
+e||(e="spacelab"),document.writeln('<link rel="stylesheet" href="/css/'+e+'/bootstrap.min.css" />')
 }();
