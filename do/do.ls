@@ -11,6 +11,7 @@ require! <[
   ./drafts
   ./layout
   ./terser
+  ./assets
 ]>
 
 metalsmith path.join __dirname, \..
@@ -41,6 +42,14 @@ metalsmith path.join __dirname, \..
   layout: \default
   filter: (.title)
 .use terser!
+.use assets do
+  font-awesome:
+    \font-awesome/css/*.min.css
+    \font-awesome/fonts/*
+  bootstrap-native:
+    js: 'bootstrap.native/dist/./@(bootstrap-native|polyfill).min.js'
+  themes:
+    css: \bootswatch/*/bootstrap.min.css
 .use metalsmith-summary.print!
 .build result
 
