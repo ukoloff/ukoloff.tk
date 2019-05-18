@@ -5,7 +5,7 @@ require! {
   \../../package : {author}
 }
 
-branch = \gh-pages
+branch = \www
 
 if process.env.TRAVIS_TAG or
   (pr = process.env.TRAVIS_PULL_REQUEST)? and pr != \false

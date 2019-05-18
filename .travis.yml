@@ -3,6 +3,7 @@ sudo: false
 branches:
   only:
   - master
+  - metalsmith
 
 git:
   depth: false
@@ -16,7 +17,7 @@ cache:
   - node_modules
 
 after_success:
-  - node plugins/ghpages
+  - node do/ghpages
 
 env:
   global:
