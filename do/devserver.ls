@@ -10,7 +10,7 @@ dev-server <<< {inject}
   done!
 
 function dev-server
-  var started
+  var started, wss
 
   !function www(files, metal-smith, done)
     done!
@@ -38,7 +38,7 @@ function dev-server
         ignore-initial: true
       .on \all changed
 
-    new ws.Server {server}
+    wss := new ws.Server {server}
     .on \connection !->
       it.on \message !->
         if \<QUIT> == it
@@ -76,3 +76,5 @@ function dev-server
 
     !function unlock
       rebuilding := void
+      wss.clients.for-each !->
+        it.send \reload
