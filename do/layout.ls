@@ -17,10 +17,17 @@ function plugin(options)
     .for-each !->
       if /[.]html?$/.test it
         try
-          unless filter file = files[it]
-            return
-          file <<< {partial}
-          file.contents = buf layout file
+          self =
+            document: file = files[it]
+            metal-smith: metal-smith
+            partial: partial
+
+          if file.with-out?.t
+            file.contents = buf that self
+
+          if filter file
+            file.contents = buf layout self
+
         catch e
           error ||:= e
 
@@ -28,8 +35,8 @@ function plugin(options)
         unless t = partials[name]
           throw Error "Partial not found: #{name}"
         args = [].slice.call &
-        args[0] = file
-        return t.apply file, args
+        args[0] = self
+        return t.apply self, args
 
     done error
 

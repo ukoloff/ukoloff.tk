@@ -1,13 +1,16 @@
 tag \!DOCTYPE, true <| html: true
 html !->
   head !->
-    title @title
+    title @document.title
     meta do
       \http-equiv : \X-UA-Compatible
       content: \IE=edge
     meta do
       name: \viewport
       content: "width=device-width, initial-scale=1"
+    meta do
+      name: \generator
+      content: "Metalsmith v#{require \metalsmith/package .version}"
 
     css-tag <[ font-awesome ]>.map -> "/css/#{it}.min.css"
 
@@ -18,15 +21,15 @@ html !->
     raw @partial \navbar
 
     div class: \container-fluid, !->
-      h1 @title
-      raw @contents
+      h1 @document.title
+      raw @document.contents
 
     raw @partial \footer
 
 ~function extra-js
   [].concat do
-    @js or []
-    metal-smith.metadata!js or []
+    @document.js or []
+    @metal-smith.metadata!js or []
 
 !function script-tag(list, options)
   for src in [].concat list

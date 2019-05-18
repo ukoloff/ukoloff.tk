@@ -28,7 +28,7 @@ metalsmith path.join __dirname, \..
 .use devserver.inject || ->
 .use metalsmith-markdown!
 .use livescript!
-.use without.compile $: {require}
+.use without $: {require}
 .use metalsmith-collections do
   partials:
     pattern: \partials/*
@@ -42,7 +42,6 @@ metalsmith path.join __dirname, \..
       draft: true
 .use drafts!
 .use metalsmith-drafts!
-.use without.run!
 .use layout do
   layout: \default
   filter: (.title)
