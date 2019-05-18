@@ -1,5 +1,5 @@
 ---
-title: Theme
+title: Оформление
 js: change
 ---
 require! <[ fs path ]>

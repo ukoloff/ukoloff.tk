@@ -28,42 +28,42 @@ function submit
   back!
   false
 
-function back
+!function back
   history.back!
 
 var onfinish
 
-function click
+!function click
   theme = @value
   if theme == data.theme or !data.link
     return
 
   data.theme = theme;
-  (onfinish || set-timeout) start
-  onfinish = register-finish
+  onfinish || set-timeout
+    .. start
+  onfinish := register-finish
 
   var next
   style = document.body.style
 
-  function register-finish
+  !function register-finish
     next = it
 
-  function start
+  !function start
     style.transition = 'opacity 120ms'
     style.opacity = 0
     set-timeout modify, 120
 
-
-  function modify
+  !function modify
     data.link.href = data.link.href.replace /(.*)\/.*?\// "$1/#{data.theme}/"
     set-timeout restore, 210
 
-  function restore
+  !function restore
     style.opacity = 1.0
     set-timeout clean-up, 120
 
-  function clean-up
+  !function clean-up
     if next and data.theme != theme
       next!
     else
-      onfinish = void
+      onfinish := void
