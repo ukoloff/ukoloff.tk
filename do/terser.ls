@@ -2,7 +2,19 @@ require! <[ terser ./buf ]>
 
 module.exports = plugin
 
-function plugin(options)
+options =
+  enclose: true
+  output:
+    max_line_len: 72
+  source-map:
+    content: \inline
+    url: \inline
+    # include-sources: true
+
+function plugin(dev)
+  unless dev
+    delete options.source-map
+
   !function transform(files, metal-smith, done)
     var error
     Object.keys files
@@ -12,13 +24,7 @@ function plugin(options)
           file = files[it]
           js = terser.minify do
             file.contents.to-string!
-            enclose: true
-            output:
-              max_line_len: 72
-            source-map:
-              content: \inline
-              url: \inline
-              # include-sources: true
+            options
           file.contents = buf js.code
         catch e
           error ||:= e

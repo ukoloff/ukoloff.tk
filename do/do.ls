@@ -14,6 +14,8 @@ require! <[
   ./assets
 ]>
 
+dev = /^-d|(--)?dev(elopment)?/.test process.argv[2]
+
 metalsmith path.join __dirname, \..
 .source \src
 .destination \out
@@ -41,7 +43,7 @@ metalsmith path.join __dirname, \..
 .use layout do
   layout: \default
   filter: (.title)
-.use terser!
+.use terser dev
 .use assets do
   font-awesome:
     \font-awesome/css/*.min.css
@@ -51,6 +53,7 @@ metalsmith path.join __dirname, \..
   themes:
     css: \bootswatch/*/bootstrap.min.css
 .use metalsmith-summary.print!
+.use if dev then do require \./devserver else ->
 .build result
 
 function result(error)
