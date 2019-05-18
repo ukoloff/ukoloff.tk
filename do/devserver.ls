@@ -40,9 +40,9 @@ function dev-server
 
     wss := new ws.Server {server}
     .on \connection !->
-      it.on \message !->
-        if \<QUIT> == it
-          process.exit!
+      <-! it.on \message
+      if \<QUIT> == it
+        process.exit!
 
     !function get(req, res)
       i = 0
@@ -61,20 +61,14 @@ function dev-server
     !function changed
       unless rebuilding
         rebuilding := new Date
-        set-timeout rebuld, 300
-
-    !function rebuld
-      console.log \Rebuilding: new Date!to-time-string!replace /\s.*/ ''
-      metal-smith
-      .metadata {}
-      .build result
-
-    !function result(error)
-      set-timeout unlock, 100
-      if error
-        console.error \ERROR error
-
-    !function unlock
-      rebuilding := void
-      wss.clients.for-each !->
-        it.send \reload
+        <-! set-timeout _, 300
+        console.log \Rebuilding: new Date!to-time-string!replace /\s.*/ \...
+        metal-smith
+        .metadata {}
+        .build !->
+          if it
+            console.error \ERROR it
+          <-! set-timeout _, 100
+          rebuilding := void
+          <-! wss.clients.for-each
+          it.send \reload

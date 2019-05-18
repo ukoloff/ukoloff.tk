@@ -40,7 +40,7 @@ var onfinish
 
   data.theme = theme;
   onfinish || set-timeout
-    .. start
+    .. <| start
   onfinish := register-finish
 
   var next
@@ -52,17 +52,11 @@ var onfinish
   !function start
     style.transition = 'opacity 120ms'
     style.opacity = 0
-    set-timeout modify, 120
-
-  !function modify
+    <-! set-timeout _, 120
     data.link.href = data.link.href.replace /(.*)\/.*?\// "$1/#{data.theme}/"
-    set-timeout restore, 210
-
-  !function restore
+    <-! set-timeout _, 210
     style.opacity = 1.0
-    set-timeout clean-up, 120
-
-  !function clean-up
+    <-! set-timeout _, 120
     if next and data.theme != theme
       next!
     else
