@@ -193,8 +193,6 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
                   !-> fa \clock-o
                   \@now.sh
 
-
-
       ul class: "nav navbar-nav navbar-right", !->
         li class: \dropdown, !->
           a do
@@ -210,3 +208,11 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
               href: \/theme
               !-> fa \eye
               \Themes
+            unless metal-smith.metadata!is-dev
+              return
+            li class: \divider
+            li !-> a do
+              id: \dev-server-close
+              href: \#
+              !-> fa \bomb
+              \Quit

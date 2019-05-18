@@ -12,7 +12,8 @@ function compile(options)
           file = files[it]
           args = [].concat file.with-out?.args || [] .join!
           t = without new Function args, file.contents.to-string!
-          t.$ = options.$
+          t.$ = {metal-smith}
+          t.$ <<< options.$
           t.id = it
           delete files[it]
           file.{}with-out.t = t

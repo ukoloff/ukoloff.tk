@@ -14,7 +14,9 @@ require! <[
   ./assets
 ]>
 
-dev = /^-d|(--)?dev(elopment)?/.test process.argv[2]
+devserver = -> ->
+if dev = /^-d|(--)?dev(elopment)?/.test process.argv[2]
+  require! <[ ./devserver ]>
 
 metalsmith path.join __dirname, \..
 .source \src
@@ -23,6 +25,7 @@ metalsmith path.join __dirname, \..
 .use metalsmith-summary.init!
 .use metalsmith-drafts!
 .use metalsmith-build-info!
+.use devserver.inject || ->
 .use metalsmith-markdown!
 .use livescript!
 .use without.compile $: {require}
@@ -53,7 +56,7 @@ metalsmith path.join __dirname, \..
   themes:
     css: \bootswatch/*/bootstrap.min.css
 .use metalsmith-summary.print!
-.use if dev then do require \./devserver else ->
+.use devserver!
 .build result
 
 function result(error)

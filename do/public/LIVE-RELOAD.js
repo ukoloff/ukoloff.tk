@@ -10,4 +10,18 @@
   function reload() {
     location.reload()
   }
+  setTimeout(quitter, 300)
+
+  function quitter() {
+    document.getElementById('dev-server-close').onclick = quit
+  }
+
+  function quit() {
+    ws.send('<QUIT>')
+    setTimeout(winClose, 1)
+    return false
+  }
+  function winClose() {
+    window.close()
+  }
 }()

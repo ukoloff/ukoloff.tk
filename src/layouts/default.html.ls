@@ -24,7 +24,9 @@ html !->
     raw @partial \footer
 
 ~function extra-js
-  [].concat @js || []
+  [].concat do
+    @js or []
+    metal-smith.metadata!js or []
 
 !function script-tag(list, options)
   for src in [].concat list

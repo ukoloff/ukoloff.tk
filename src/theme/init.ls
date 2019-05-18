@@ -6,7 +6,7 @@ if /\/\w+$/.test location.pathname
 if storage
   theme = storage.theme
 if !theme
-  theme = \flatly
+  theme = \spacelab
 
 document.writeln """
   <link rel="stylesheet" href="/css/#{theme}/bootstrap.min.css" />

@@ -1,6 +1,15 @@
 require! <[ path http ws serve-static send opener chokidar ]>
 
-module.exports = ->
+module.exports = dev-server
+dev-server <<< {inject}
+
+!function inject(files, metal-smith, done)
+  metal-smith.metadata!
+    ..[]js.push \/LIVE-RELOAD
+    ..is-dev = true
+  done!
+
+function dev-server
   var started
 
   !function www(files, metal-smith, done)
@@ -28,6 +37,12 @@ module.exports = ->
         cwd: metal-smith.source!
         ignore-initial: true
       .on \all changed
+
+    new ws.Server {server}
+    .on \connection !->
+      it.on \message !->
+        if \<QUIT> == it
+          process.exit!
 
     !function get(req, res)
       i = 0
