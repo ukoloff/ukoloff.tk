@@ -21,10 +21,11 @@
   "bugs": {
     "url": "https://github.com/ukoloff/ukoloff.tk/issues"
   },
+  "main": "do",
   "scripts": {
-    "start": "node do --dev",
-    "test": "node do",
-    "now-build": "node do"
+    "start": "node . --dev",
+    "test": "node .",
+    "now-build": "node ."
   },
   "dependencies": {
     "bootstrap.native": "^2.0.26",

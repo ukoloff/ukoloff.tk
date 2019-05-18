@@ -10,6 +10,7 @@ require! <[
   ./without
   ./drafts
   ./layout
+  ./terser
 ]>
 
 metalsmith path.join __dirname, \..
@@ -39,6 +40,7 @@ metalsmith path.join __dirname, \..
 .use layout do
   layout: \default
   filter: (.title)
+.use terser!
 .use metalsmith-summary.print!
 .build result
 
