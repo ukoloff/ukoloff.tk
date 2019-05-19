@@ -1,7 +1,6 @@
 require! <[
   path
   metalsmith
-  metalsmith-build-info
   metalsmith-drafts
   metalsmith-markdown
   metalsmith-collections
@@ -24,7 +23,6 @@ metalsmith path.join __dirname, \..
 .clean true
 .use metalsmith-summary.init!
 .use metalsmith-drafts!
-.use metalsmith-build-info!
 .use devserver.inject || ->
 .use metalsmith-markdown!
 .use livescript!
