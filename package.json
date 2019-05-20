@@ -10,7 +10,7 @@
     "email": "ukoloff@gmail.com"
   },
   "keywords": [
-    "docpad",
+    "metalsmith",
     "homepage",
     "without"
   ],
@@ -21,24 +21,28 @@
   "bugs": {
     "url": "https://github.com/ukoloff/ukoloff.tk/issues"
   },
+  "main": "do",
   "scripts": {
-    "start": "docpad run",
-    "test": "docpad generate --env static",
-    "now-build": "docpad generate --env static"
+    "start": "node . --dev",
+    "test": "node .",
+    "now-build": "node ."
   },
   "dependencies": {
     "bootstrap.native": "^2.0.26",
     "bootswatch": "^3.4.1",
-    "docpad": "^6.82.5",
-    "docpad-plugin-marked": "^2.5.0",
-    "docpad-plugin-partials": "^2.13.0",
     "font-awesome": "^4.7.0",
     "fs-extra": "^7.0.1",
     "livescript": "^1.6.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-drafts": "^0.1.0",
+    "metalsmith-markdown": "^1.2.0",
+    "metalsmith-summary": "^1.0.0",
     "terser": "^3.17.0",
     "without": "^1.2.3"
   },
   "devDependencies": {
+    "chokidar": "^3.0.0",
     "opener": "^1.5.1",
     "serve-static": "^1.14.1",
     "ws": "^7.0.0"
