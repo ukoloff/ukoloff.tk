@@ -1,4 +1,8 @@
+require! <[ gulp gulp-debug ]>
+
 exports.default = hi
 
-async function hi
-  console.log \Hi!
+function hi
+  gulp.src \src/**/*
+  .pipe gulp-debug title: \src
+  .pipe gulp.dest \out
