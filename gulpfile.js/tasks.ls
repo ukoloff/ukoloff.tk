@@ -5,17 +5,21 @@ require! <[
   ./assets
 ]>
 
+build = gulp.parallel do
+  pages
+  assets
+
 exports <<< {
   clean
   pages
   assets
+  build
+  github
   watch
-  default: build-once = gulp.parallel do
-    pages
-    assets
+  default: build
   dev: gulp.series do
     flag
-    build-once
+    build
     watch
 }
 
@@ -54,3 +58,6 @@ function watch
 function flag(done)
   site.is-dev = true
   done!
+
+function github
+  do require \./github
