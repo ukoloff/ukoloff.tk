@@ -12,7 +12,10 @@ function clean
   fs-extra.empty-dir \out
 
 function pages
-  gulp.src \src/**/* dot: true
+  gulp.src do
+    \src/**/*
+    dot: true
+    nodir: true
   .pipe gulp-front-matter!
   .pipe gulp-if /[.]md$/ gulp-markdown!
   .pipe gulp-if /[.]ls$/ livescript!
