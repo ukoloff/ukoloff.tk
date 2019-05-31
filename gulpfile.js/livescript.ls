@@ -14,6 +14,6 @@ module.exports = ->
 
     file.contents = buf js.code
     file.extname = \.js
-    done void, file
+    done void file
   catch err
     done err
