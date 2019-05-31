@@ -1,4 +1,4 @@
-require! <[ through2 livescript ./buf ]>
+require! <[ through2 livescript vinyl-sourcemaps-apply ./buf ]>
 
 module.exports = ->
   through2.obj live-script
@@ -13,6 +13,10 @@ module.exports = ->
       output-filename: file.stem
 
     file.contents = buf js.code
+    if file.source-map
+      # Dirty fix
+      js.map._file = file.relative
+      vinyl-sourcemaps-apply file, js.map.to-string!
     file.extname = \.js
     done void file
   catch err

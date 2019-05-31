@@ -1,6 +1,6 @@
 require! <[
   fs-extra
-  gulp gulp-if gulp-markdown gulp-front-matter gulp-terser gulp-debug
+  gulp gulp-if gulp-markdown gulp-front-matter gulp-sourcemaps gulp-terser gulp-debug
   ./livescript ./without ./extract ./layout ./site
   ./assets
 ]>
@@ -29,6 +29,7 @@ function pages
     nodir: true
   .pipe gulp-front-matter!
   .pipe gulp-if /[.]md$/ gulp-markdown!
+  .pipe gulp-if /[.](?:ls|js)$/ gulp-sourcemaps.init!
   .pipe gulp-if /[.]ls$/ livescript!
   .pipe gulp-if /[.]html?[.]js$/ without $: {require}
   .pipe gulp-if '{layouts,partials}/*' do fragments = extract!
@@ -41,6 +42,7 @@ function pages
     enclose: true
     output:
       max_line_len: 72
+  .pipe gulp-if site.is-dev, gulp-sourcemaps.write \.
   .pipe gulp.dest \out
   .pipe gulp-debug do
     title: \Pages
