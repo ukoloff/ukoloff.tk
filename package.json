@@ -38,6 +38,7 @@
     "gulp-markdown": "^4.0.0",
     "livescript": "^1.6.0",
     "terser": "^3.17.0",
+    "through2": "^3.0.1",
     "without": "^1.2.3"
   },
   "devDependencies": {
