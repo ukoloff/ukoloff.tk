@@ -23,7 +23,7 @@
   },
   "main": "do",
   "scripts": {
-    "start": "gulp",
+    "start": "gulp dev",
     "test": "gulp",
     "now-build": "gulp"
   },

@@ -1,17 +1,23 @@
 require! <[
   fs-extra
   gulp gulp-if gulp-markdown gulp-front-matter gulp-terser gulp-debug
-  ./livescript ./without ./extract ./layout
+  ./livescript ./without ./extract ./layout ./site
   ./assets
 ]>
 
-exports <<<
-  clean: clean
-  pages: pages
-  assets: assets
-  default: gulp.parallel do
+exports <<< {
+  clean
+  pages
+  assets
+  watch
+  default: build-once = gulp.parallel do
     pages
     assets
+  dev: gulp.series do
+    flag
+    build-once
+    watch
+}
 
 function clean
   fs-extra.empty-dir \out
@@ -29,7 +35,7 @@ function pages
   .pipe gulp-if /[.]html?$/ layout do
     filter: (.front-matter?.title)
     layout: \default
-    site: require \./site
+    site: site
     fragments: fragments.promise
   .pipe gulp-if /[.]js$/ gulp-terser do
     enclose: true
@@ -39,3 +45,10 @@ function pages
   .pipe gulp-debug do
     title: \Pages
     show-files: false
+
+function watch
+  gulp.watch \src pages
+
+function flag(done)
+  site.is-dev = true
+  done!
