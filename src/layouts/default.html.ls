@@ -28,7 +28,7 @@ html !->
 
 ~function extra-js
   [].concat do
-    @document.js or []
+    @document.front-matter?.js or []
     @site.js or []
 
 !function script-tag(list, options)
