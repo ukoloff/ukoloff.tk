@@ -2,6 +2,7 @@ require! <[
   fs-extra
   gulp gulp-if gulp-markdown gulp-front-matter gulp-terser gulp-debug
   ./livescript ./without ./extract ./layout
+  ./assets
 ]>
 
 exports <<<

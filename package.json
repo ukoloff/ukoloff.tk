@@ -2,7 +2,7 @@
   "name": "ukoloff.tk",
   "private": true,
   "version": "1.0.0",
-  "description": "Personal site using DocPad",
+  "description": "Personal site built with Gulp",
   "homepage": "http://ukoloff.tk",
   "license": "ISC",
   "author": {
@@ -10,7 +10,7 @@
     "email": "ukoloff@gmail.com"
   },
   "keywords": [
-    "metalsmith",
+    "gulp",
     "homepage",
     "without"
   ],
@@ -33,6 +33,7 @@
     "font-awesome": "^4.7.0",
     "fs-extra": "^7.0.1",
     "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
     "gulp-front-matter": "^2.0.0-7",
     "gulp-if": "^2.0.2",
     "gulp-markdown": "^4.0.0",
@@ -42,7 +43,6 @@
     "without": "^1.2.3"
   },
   "devDependencies": {
-    "gulp-debug": "^4.0.0",
     "opener": "^1.5.1"
   }
 }
