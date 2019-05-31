@@ -9,8 +9,8 @@ module.exports = ->
       file.contents.to-string!
       bare: true
       map: \linked
-      filename: file.stem
-      output-filename: file.stem
+      filename: file.basename
+      output-filename: file.basename
 
     file.contents = buf js.code
     if file.source-map
