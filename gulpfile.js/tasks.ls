@@ -6,8 +6,11 @@ require! <[
 ]>
 
 exports <<<
-  default: pages
+  pages: pages
   clean: clean
+  default: gulp.parallel do
+    pages
+    exports.assets
 
 function clean
   fs-extra.empty-dir \out
