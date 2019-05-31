@@ -14,7 +14,7 @@ module.exports = gh-pages
     # Create branch if absent
     git "branch #{branch} origin/#{branch}"
   .then ->
-    fs-extra.empty-dir-sync repo := path.join __dirname, \../tmp/branch branch
+    fs-extra.empty-dir repo := path.join __dirname, \../tmp/branch branch
   .then ->
     # Init temporary repo
     git "clone ../../.. . -b #{branch}"
