@@ -14,12 +14,8 @@ function clean
 function hi
   gulp.src \src/**/* dot: true
   .pipe gulp-front-matter!
-  .pipe gulp-if \**/*.md gulp-markdown!
-  .pipe gulp-if \**/*.ls livescript!, void dot: true
-  .pipe gulp-if do
-    \**/*.html.js
-    without $: {require}
-    void
-    dot: true
+  .pipe gulp-if /[.]md$/ gulp-markdown!
+  .pipe gulp-if /[.]ls$/ livescript!
+  .pipe gulp-if /[.]html?[.]js$/ without $: {require}
   .pipe gulp.dest \out
   .pipe gulp-debug title: \src
