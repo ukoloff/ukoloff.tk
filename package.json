@@ -25,6 +25,7 @@
   "scripts": {
     "start": "gulp dev",
     "test": "gulp",
+    "ghpages": "gulp github",
     "now-build": "gulp"
   },
   "dependencies": {

@@ -5,7 +5,7 @@ branch = \www
 module.exports = gh-pages
 
 !function gh-pages
-  var msg
+  var msg, travis-ci
   repo = \.
 
   return git-info!
@@ -41,8 +41,18 @@ module.exports = gh-pages
   .then ->
     git <[ commit -m ]>.concat msg
   .then ->
-    # Push back to main repo
+    # Push back to local repo
     git \push
+  .then ->
+    if travis-ci := \false == process.env.TRAVIS_PULL_REQUEST
+      and user = process.env.DEPLOY_USER
+      and token = process.env.DEPLOY_TOKEN
+      and slug = process.env.TRAVIS_REPO_SLUG
+        # Prepare to push directly to GitHub
+        git <[ remote add github ]>.concat "https://#{user}:#{token}@github.com/#{slug}.git"
+  .then ->
+    if travis-ci
+      git <[ push github ]>.concat branch
 
   function git(args)
     resolve, reject <-! new Promise _
