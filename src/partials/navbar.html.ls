@@ -208,7 +208,7 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
               href: \/theme
               !-> fa \eye
               \Themes
-            unless @metal-smith.metadata!is-dev
+            unless @site.is-dev
               return
             li class: \divider
             li !-> a do
