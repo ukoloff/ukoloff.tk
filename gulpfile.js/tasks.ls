@@ -1,7 +1,7 @@
 require! <[
   fs-extra
   gulp gulp-if gulp-markdown gulp-front-matter gulp-debug
-  ./livescript ./without
+  ./livescript ./without ./extract
 ]>
 
 exports <<<
@@ -17,5 +17,5 @@ function hi
   .pipe gulp-if /[.]md$/ gulp-markdown!
   .pipe gulp-if /[.]ls$/ livescript!
   .pipe gulp-if /[.]html?[.]js$/ without $: {require}
+  .pipe gulp-if '{layouts,partials}/*' extract!
   .pipe gulp.dest \out
-  .pipe gulp-debug title: \src
