@@ -1,7 +1,7 @@
 require! <[
   fs-extra
-  gulp gulp-if gulp-markdown gulp-front-matter gulp-sourcemaps gulp-terser gulp-debug
-  ./livescript ./without ./extract ./layout ./site
+  gulp gulp-if gulp-markdown gulp-sourcemaps gulp-terser gulp-debug
+  ./matter ./livescript ./without ./extract ./layout ./site
   ./assets
 ]>
 
@@ -31,7 +31,7 @@ function pages
     \src/**/*
     dot: true
     nodir: true
-  .pipe gulp-front-matter!
+  .pipe matter!
   .pipe gulp-if /[.]md$/ gulp-markdown!
   .pipe gulp-if /[.](?:ls|js)$/ gulp-sourcemaps.init!
   .pipe gulp-if /[.]ls$/ livescript!
