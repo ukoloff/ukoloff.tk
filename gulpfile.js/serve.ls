@@ -3,12 +3,13 @@ require! <[ path http ws serve-static send opener ./site ]>
 exports <<< {
   www
   reload
+  final
 }
 
 site.is-dev = true
 site.[]js.push \/LIVE-RELOAD
 
-var server, wss
+var server, wss, finalizer
 
 !function www(done)
   getters =
@@ -29,6 +30,7 @@ var server, wss
   .on \connection !->
     <-! it.on \message
     if \<QUIT> == it
+      finalizer?!
       process.exit!
 
   !function get(req, res)
@@ -47,3 +49,6 @@ var server, wss
   <-! wss.clients.for-each
   it.send \reload
   done!
+
+!function final(done)
+  finalizer := done

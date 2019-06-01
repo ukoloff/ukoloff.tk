@@ -53,19 +53,21 @@ function pages
     title: \Pages
     show-files: false
 
-function watch
+!function watch(done)
+  require! \./serve
   gulp.watch \src gulp.series do
     pages
-    require \./serve .reload
+    serve.reload
+  serve.final done
 
 function github
   do require \./github
 
-function flag(done)
+!function flag(done)
   require \./serve
   done!
 
-function www(done)
+!function www(done)
   require \./serve .www <| done
 
 
