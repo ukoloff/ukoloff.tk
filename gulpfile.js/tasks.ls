@@ -1,7 +1,7 @@
 require! <[
   fs-extra
   gulp gulp-if gulp-markdown gulp-sourcemaps gulp-terser gulp-debug
-  ./matter ./livescript ./without ./extract ./layout ./site ./serve
+  ./matter ./livescript ./without ./extract ./layout ./site
   ./assets
 ]>
 
