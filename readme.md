@@ -27,8 +27,9 @@ fast and lightweight.
 Here it is!
 
 Old version are in
-  - [jekyll](../../tree/jekyll/) branch.
+  - [Jekyll](../../tree/jekyll/) branch.
   - [DocPad](../../tree/docpad/) branch.
+  - [Metalsmith](../../tree/metalsmith/) branch.
 
 ## Credits
 
@@ -43,6 +44,8 @@ Old version are in
     + [Node.js](https://nodejs.org/)
   * [Metalsmith](https://metalsmith.io/)
     + [repo](https://github.com/segmentio/metalsmith)
+  * [Gulp](https://gulpjs.com/)
+    + [repo](https://github.com/gulpjs/gulp)
   * [Bootstrap](http://getbootstrap.com/)
     + [Bootswatch](http://bootswatch.com/)
     + [Native JavaScript for Bootstrap](https://thednp.github.io/bootstrap.native/)
