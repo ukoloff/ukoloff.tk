@@ -1,7 +1,7 @@
 require! <[
   fs-extra
   gulp gulp-if gulp-markdown gulp-sourcemaps gulp-terser gulp-debug
-  ./matter ./livescript ./without ./extract ./layout ./site
+  ./matter ./livescript ./without ./extract ./layout ./site ./serve
   ./assets
 ]>
 
@@ -20,6 +20,7 @@ exports <<< {
   dev: gulp.series do
     flag
     build
+    www
     watch
 }
 
@@ -53,11 +54,18 @@ function pages
     show-files: false
 
 function watch
-  gulp.watch \src pages
-
-function flag(done)
-  site.is-dev = true
-  done!
+  gulp.watch \src gulp.series do
+    pages
+    require \./serve .reload
 
 function github
   do require \./github
+
+function flag(done)
+  require \./serve
+  done!
+
+function www(done)
+  require \./serve .www <| done
+
+
