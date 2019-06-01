@@ -47,8 +47,8 @@ function pages
     enclose: true
     output:
       max_line_len: 72
-  .pipe gulp-sourcemaps.map-sources ->
-    "/#{it}"
+  # .pipe gulp-sourcemaps.map-sources ->
+  #   "/#{it}"
   .pipe gulp-if site.is-dev, gulp-sourcemaps.write \.
   .pipe gulp.dest \out
   .pipe gulp-debug do

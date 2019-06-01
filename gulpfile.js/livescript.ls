@@ -9,7 +9,7 @@ module.exports = ->
       src = file.contents.to-string!
       bare: true
       map: \linked
-      filename: file.relative
+      filename: file.basename
       output-filename: ''
 
     file.contents = buf js.code
@@ -17,9 +17,9 @@ module.exports = ->
       # Dirty fix
       map = js.map.toJSON!
       map <<<
-        file: file.relative
+        file: file.basename
         # sourceRoot: \/
-        sources: [file.relative]
+        # sources: [file.basename]
         sourcesContent: [src]
       vinyl-sourcemaps-apply file, map
     file.extname = \.js
