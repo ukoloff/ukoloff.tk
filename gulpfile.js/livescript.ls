@@ -18,7 +18,7 @@ module.exports = ->
       map = js.map.toJSON!
       map <<<
         file: file.relative
-        sourceRoot: \/
+        # sourceRoot: \/
         sources: [file.relative]
         sourcesContent: [src]
       vinyl-sourcemaps-apply file, map
