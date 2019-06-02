@@ -15,7 +15,6 @@ exports <<< {
   assets
   build
   github
-  watch
   default: build
   dev: gulp.series do
     flag
@@ -71,5 +70,3 @@ function github
 
 !function www(done)
   require \./serve .www <| done
-
-
