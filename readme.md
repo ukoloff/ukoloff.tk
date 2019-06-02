@@ -24,6 +24,13 @@ Not very popular,
 but very practical,
 extremely *simple*,
 fast and lightweight.
+
+And finally
+(*so far*)
+I decided to test Gulp.
+Far more popular
+and as practical as
+its predecessor.
 Here it is!
 
 Old version are in
@@ -38,17 +45,24 @@ Old version are in
   * [GitLab](https://gitlab.com/)
   * [now.sh](https://zeit.co/now)
   * [Jekyll](https://jekyllrb.com/)
+    + [repo](https://github.com/jekyll/jekyll)
+    + [gem](https://rubygems.org/gems/jekyll)
     + [Ruby](https://www.ruby-lang.org/)
   * [DocPad](http://docpad.org/)
+    + [repo](https://github.com/docpad/docpad)
+    + [package](https://www.npmjs.com/package/docpad)
     + [Deploy guide](http://docpad.org/docs/deploy/)
     + [Node.js](https://nodejs.org/)
   * [Metalsmith](https://metalsmith.io/)
     + [repo](https://github.com/segmentio/metalsmith)
+    + [package](https://www.npmjs.com/package/metalsmith)
   * [Gulp](https://gulpjs.com/)
     + [repo](https://github.com/gulpjs/gulp)
+    + [package](https://www.npmjs.com/package/gulp)
   * [Bootstrap](http://getbootstrap.com/)
     + [Bootswatch](http://bootswatch.com/)
     + [Native JavaScript for Bootstrap](https://thednp.github.io/bootstrap.native/)
   * [Font Awesome](http://fontawesome.io/)
   * [LiveScript](http://livescript.net/)
     + [CoffeeScript](https://coffeescript.org/)
+    + [Earl Grey](http://www.earl-grey.io/)
