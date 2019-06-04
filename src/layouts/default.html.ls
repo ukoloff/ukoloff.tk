@@ -1,7 +1,7 @@
 tag \!DOCTYPE, true <| html: true
 html !->
   head !->
-    title @document.title
+    title get-title!
     meta do
       \http-equiv : \X-UA-Compatible
       content: \IE=edge
@@ -10,7 +10,7 @@ html !->
       content: "width=device-width, initial-scale=1"
     meta do
       name: \generator
-      content: "Metalsmith v#{require \metalsmith/package .version}"
+      content: "Gulp v#{require \gulp/package .version}"
 
     css-tag <[ font-awesome ]>.map -> "/css/#{it}.min.css"
 
@@ -21,15 +21,15 @@ html !->
     raw @partial \navbar
 
     div class: \container-fluid, !->
-      h1 @document.title
+      h1 get-title!
       raw @document.contents
 
     raw @partial \footer
 
 ~function extra-js
   [].concat do
-    @document.js or []
-    @metal-smith.metadata!js or []
+    @document.front-matter?.js or []
+    @site.js or []
 
 !function script-tag(list, options)
   for src in [].concat list
@@ -42,3 +42,6 @@ html !->
     link do
       rel: \stylesheet
       href: href
+
+~function get-title
+  @document.front-matter?.title or @site.title

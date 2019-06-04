@@ -38,8 +38,9 @@ form do
       !-> i class: 'fa fa-undo'
       ' '
       \Cancel
-    for theme in themes
-      link do
-        rel: \prefetch
-        as: \style
-        href: "/css/#{theme}/bootstrap.min.css"
+
+for theme in themes
+  link do
+    rel: \prefetch
+    as: \style
+    href: "/css/#{theme}/bootstrap.min.css"

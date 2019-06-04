@@ -2,7 +2,7 @@
   "name": "ukoloff.tk",
   "private": true,
   "version": "1.0.0",
-  "description": "Personal site using DocPad",
+  "description": "Personal site built with Gulp",
   "homepage": "http://ukoloff.tk",
   "license": "ISC",
   "author": {
@@ -10,7 +10,7 @@
     "email": "ukoloff@gmail.com"
   },
   "keywords": [
-    "metalsmith",
+    "gulp",
     "homepage",
     "without"
   ],
@@ -23,26 +23,31 @@
   },
   "main": "do",
   "scripts": {
-    "start": "node . --dev",
-    "test": "node .",
-    "now-build": "node ."
+    "start": "gulp dev",
+    "test": "gulp",
+    "ghpages": "gulp github",
+    "now-build": "gulp"
   },
   "dependencies": {
     "bootstrap.native": "^2.0.26",
     "bootswatch": "^3.4.1",
     "font-awesome": "^4.7.0",
     "fs-extra": "^7.0.1",
+    "gray-matter": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-markdown": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
     "livescript": "^1.6.0",
-    "metalsmith": "^2.3.0",
-    "metalsmith-collections": "^0.9.0",
-    "metalsmith-drafts": "^0.1.0",
-    "metalsmith-markdown": "^1.2.0",
-    "metalsmith-summary": "^1.0.0",
-    "terser": "^3.17.0",
+    "through2": "^3.0.1",
+    "valid-8": "^1.0.1",
+    "vinyl-sourcemaps-apply": "^0.2.1",
     "without": "^1.2.3"
   },
   "devDependencies": {
-    "chokidar": "^3.0.0",
     "opener": "^1.5.1",
     "serve-static": "^1.14.1",
     "ws": "^7.0.0"

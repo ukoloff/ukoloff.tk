@@ -16,7 +16,7 @@ cache:
   - node_modules
 
 after_success:
-  - node do/ghpages
+  - npm run ghpages
 
 env:
   global:
