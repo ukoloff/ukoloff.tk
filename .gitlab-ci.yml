@@ -1,4 +1,4 @@
-image: node
+image: node:10
 
 cache:
   paths:
@@ -6,10 +6,11 @@ cache:
 
 pages:
   before_script:
-  - NPM_CONFIG_LOGLEVEL=warn
+  - node -v
+  # - NPM_CONFIG_LOGLEVEL=warn
   - npm install --production
   script:
-  - node_modules/.bin/docpad generate --env=static
+  - npm test
   - mv out public
   artifacts:
     paths:
