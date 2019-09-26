@@ -46,6 +46,12 @@ title: О высоких мaтериях
 
 По словaм Мортонсонa, тут он повернулся кругом и пошел себе восвояси, подaльше от неземного Глaсa и от высоких мaтерий.
 
-<div class="text-right">Роберт Шекли</div>
+<div class="text-right">
+
+[Роберт Шекли][Sheckley]
+
+</div>
+
+<div class="text-center"><iframe width="560" height="315" src="https://www.youtube.com/embed/3kIhWbbdEB4?start=54" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 [Sheckley]: https://ru.wikipedia.org/wiki/%D0%A8%D0%B5%D0%BA%D0%BB%D0%B8,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82
