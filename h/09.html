@@ -1,0 +1,185 @@
+<!DOCTYPE html><html><head><title>Знакомство с Git</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Gulp v4.0.2"><link rel="stylesheet" href="/css/font-awesome.min.css"><script src="/theme/init.js"></script><script src="/js/polyfill.min.js" defer></script><script src="/js/bootstrap-native.min.js" defer></script></head><body><nav class="navbar navbar-inverse navbar-static-top"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">Hello!</a></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">@Net<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="https://github.com/ukoloff"><i class="fa fa-github"></i> GitHub</a></li><li><a href="https://bitbucket.org/ukoloff/"><i class="fa fa-bitbucket"></i> Bitbucket</a></li><li><a href="https://gitlab.com/u/ukoloff/projects"><i class="fa fa-gitlab"></i> GitLab</a></li><li class="divider"></li><li><a href="https://rubygems.org/profiles/ukoloff"><i class="fa fa-diamond"></i> RubyGems</a></li><li><a href="https://www.npmjs.com/~ukoloff"><i class="fa fa-spinner fa-spin"></i> NPM</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Projects<span class="caret"></span></a><ul class="dropdown-menu  dropdown-menu-right" role="menu"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-bicycle"></i> JavaScript<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li role="presentation" class="dropdown-header"><i class="fa fa-bicycle"></i> JavaScript</li><li><a href="https://github.com/ukoloff/win-ca"><i class="fa fa-certificate"></i> Root Certificates on Windows</a></li><li><a href="https://github.com/ukoloff/nvms"><i class="fa fa-plug"></i> NVM for M$ Windows</a></li><li><a href="http://coffee.ukoloff.tk/"><i class="fa fa-coffee"></i> Online Coffee compiler &amp; minifier</a></li><li><a href="https://github.com/ukoloff/without"><i class="fa fa-file-word-o"></i> WithOut template engine</a></li><li><a href="/bkrs/"><i class="fa fa-book"></i> BKRS 2 DSL &amp; Dictan converter</a></li><li><a href="https://github.com/ukoloff/valid-8"><i class="fa fa-language"></i> UTF-8 validator</a></li><li><a href="https://github.com/ukoloff/appveyor-mocha"><i class="fa fa-binoculars"></i> AppVeyor reporting for mocha</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-truck"></i> Ruby<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li role="presentation" class="dropdown-header"><i class="fa fa-truck"></i> Ruby</li><li><a href="https://github.com/ukoloff/em-wssh"><i class="fa fa-random"></i> Proxy SSH thru nginx</a></li><li><a href="https://github.com/ukoloff/assets-watchify"><i class="fa fa-cogs"></i> Watchify for Rails</a></li><li><a href="https://github.com/ukoloff/execjs-xtrn"><i class="fa fa-cubes"></i> JavaScript engine</a></li><li><a href="https://github.com/ukoloff/openssl-win-root"><i class="fa fa-certificate"></i> Root Certificates on Windows</a></li><li><a href="https://github.com/ukoloff/appveyor-worker"><i class="fa fa-binoculars"></i> AppVeyor reporting</a></li></ul></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-moon-o"></i> Lua @ Ruby<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li role="presentation" class="dropdown-header"><i class="fa fa-moon-o"></i> Lua @ Ruby</li><li><a href="https://github.com/ukoloff/rufus-lua-win"><i class="fa fa-windows"></i> Rufus::Lua::Win</a></li><li><a href="https://github.com/ukoloff/rufus-lua-moon"><i class="fa fa-file-code-o"></i> Rufus::Lua::Moon</a></li></ul></li><li class="divider"></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-html5"></i> This site<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="https://github.com/ukoloff/ukoloff.tk"><i class="fa fa-code"></i> Source code</a></li><li class="divider"></li><li><a href="http://ukoloff.tk/"><i class="fa fa-github"></i> @GitHub</a></li><li><a href="http://ukoloff.gitlab.io/"><i class="fa fa-gitlab"></i> @GitLab</a></li><li><a href="http://ukoloff.now.sh/"><i class="fa fa-clock-o"></i> @now.sh</a></li></ul></li></ul></li></ul><ul class="nav navbar-nav navbar-right"><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="fa fa-wrench"></i> Setup<span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li><a href="/theme"><i class="fa fa-eye"></i> Themes</a></li></ul></li></ul></div></div></nav><div class="container-fluid"><h1>Знакомство с Git</h1><p>Цель сегодняшнего занятия -
+установить необходимое программное обеспечение для
+работы с
+системой управления версиями <a href="https://git-scm.com/">Git</a>
+и начать её использовать.</p>
+<p>Если Вы уже используете какой-то набор инструментов
+(Git + GUI)
+для работы с Git,
+можете использовать его.
+Ну или попробуйте предлагаемый набор ПО:</p>
+<ul>
+<li>Скачайте дистрибутив Git с <a href="https://git-scm.com/downloads">официальной страницы</a><ul>
+<li>Если Вы можете устанавливать ПО на свой компьютер
+(есть права администратора) - обычную версию</li>
+<li>Если не можете - <code>Portable</code> версию</li>
+</ul>
+</li>
+<li>Установите Git на свой компьютер<ul>
+<li>Для обычной версии просто запустите программу установки и следуйте инструкциям</li>
+<li>Для <code>Portable</code> версии распакуйте архив в какую-нибудь папку,
+желательно без русских букв в названии и по возможности покороче,
+например:<ul>
+<li>C:\Git</li>
+<li>C:\Users\me\git</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Задайте имя пользователя для подписи коммитов<ul>
+<li>При штатной установке Git просто запустите командную строку Windows<ul>
+<li>Ищите <code>cmd</code> в меню Пуск</li>
+<li>Или нажмите <code>Win</code>+<code>R</code>, наберите <code>cmd</code> и нажмите <code>Enter</code></li>
+<li>Или запустите <code>PowerShell</code> из меню Пуск</li>
+<li>...</li>
+</ul>
+</li>
+<li>Для <code>Portable</code> установки:<ul>
+<li>Откройте папку, куда Вы распаковали Git</li>
+<li>Откройте подпапку <code>bin</code></li>
+<li>Запустите <code>bash</code> или <code>sh</code></li>
+</ul>
+</li>
+<li>Отдайте команды:<ul>
+<li>git config --global user.name &quot;Vasya Pupkine&quot;</li>
+<li>git config --global user.email <a href="mailto:vasya@urfu.ru">vasya@urfu.ru</a></li>
+</ul>
+</li>
+<li>Подставьте свои данные<ul>
+<li>Впрочем, на чужом компьютере можете вписать всё что угодно</li>
+<li>Эти данные никак не проверяются</li>
+<li>Используются только для удобства работы</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Скачайте и установите <a href="https://code.visualstudio.com/">Visual Studio Code</a><ul>
+<li>Можно ограничиться <code>User Installer</code></li>
+<li>Если есть права администратора, то и <code>System Installer</code> подойдёт</li>
+</ul>
+</li>
+<li>Настройте Visual Studio Code для работы с Git<ul>
+<li>При штатной установке Git всё уже сделано</li>
+<li>Для <code>Portable</code> Git:</li>
+<li>Запустите Visual Studio Code и откройте настройки
+(File / Preferences / Settings или <code>Ctrl</code> + <code>,</code>)</li>
+<li>Найдите в правом верхнем углу кнопку <code>Open Settings (JSON)</code> и нажмите</li>
+<li>В открывшемся файле <code>settings.json</code> добавьте строчку вида<ul>
+<li><code>&quot;git.path&quot;: &quot;C:\\Users\\me\\git\\bin\\git.exe&quot;</code></li>
+</ul>
+</li>
+<li>Обратите внимание:<ul>
+<li>Нужно указывать путь к папке <code>bin</code></li>
+<li>Одиночные <code>\</code> нужно заменять на двойные <code>\\</code>, этого требует синтаксис JSON</li>
+<li>Если файл <code>settings.json</code> не пуст, то в конце предыдущей строчки надо будет добавить запятую</li>
+</ul>
+</li>
+<li>Сохраните файл <code>settings.json</code> (File / Save или <code>Ctrl</code> + <code>S</code>)</li>
+</ul>
+</li>
+<li>Создайте папку для работы и откройте её в Visual Studio Code<ul>
+<li>File / Open Folder или <code>Ctrl</code> + <code>K</code> <code>Ctrl</code> + <code>O</code></li>
+<li>Создайте в ней файл <code>readme.md</code> (File / New File или <code>Ctrl</code> + <code>N</code> или кнопка <code>New File</code> слева вверху)
+в формате <a href="https://ru.wikipedia.org/wiki/Markdown">Markdown</a></li>
+<li>Впишите в него например такой текст:<pre><code class="language-markdown"># Hello, ~~world~~ git!</code></pre>
+</li>
+<li>Сохраните файл (File / Save или <code>Ctrl</code> + <code>S</code>)</li>
+<li>Посмотрите форматированную версию (кнопка <code>Open Preview</code> справа вверху)</li>
+</ul>
+</li>
+<li>Инициализируйте репозиторий Git<ul>
+<li>Перейдите в режим Source Control (слева; или <code>Ctrl</code> + <code>Shift</code> + <code>G</code> или View / SCM)</li>
+<li>Нажмите кнопку <code>Initialize repo</code> слева вверху</li>
+<li>Подтвердите путь к рабочей папке</li>
+</ul>
+</li>
+<li>Сделайте первый коммит<ul>
+<li>Перейдите в режим Source Control, если Вы ешё не там</li>
+<li>Наберите сообщение commit&#39;а (например: <code>Git: начало</code>)</li>
+<li>Нажмите <code>Ctrl</code> + <code>Enter</code> или кнопку <code>Commit</code> над текстом коммита</li>
+</ul>
+</li>
+<li>Добавьте какой-нибудь текст к файлу<ul>
+<li>Например, несколько абзацев <a href="https://ru.lipsum.com/">Lorem Ipsum</a> (нажмите <code>Сгенерировать Lorem ipsum</code>!)</li>
+<li>Обратите внимание, что абзацы в Markdown нужно разделять пустыми строками</li>
+<li>Сохраните изменения</li>
+</ul>
+</li>
+<li>Сделайте второй коммит<ul>
+<li>Дайте осмысленное имя, например <code>Добавил Lorem ipsum</code></li>
+</ul>
+</li>
+<li>Установите расширение <code>Git Graph</code> для просмотра истории<ul>
+<li>Перейдите в режим Extensions (<code>Ctrl</code> + <code>Shift</code> + <code>X</code> или View / Extensions)</li>
+<li>Наберите в поиске Git Graph</li>
+<li>Установите расширение</li>
+</ul>
+</li>
+<li>Просмотрите историю коммитов<ul>
+<li>Откройте окно Git Graph<ul>
+<li>либо кнопкой внизу слева</li>
+<li>либо в режиме SCM кнопкой вверху слева</li>
+<li>либо нажмите <code>F1</code>, наберите <code>view git</code> и выполните команду <code>Git Graph: View Git Log</code></li>
+</ul>
+</li>
+<li>Убедитесь, что в истории есть два коммита</li>
+<li>Посмотрите их содержимое</li>
+</ul>
+</li>
+<li>Сохраните копию репозитория на GitHub<ul>
+<li>Если у Вас ещё нет учётной записи на <a href="https://github.com/">GitHub</a> - зарегистрируйтесь там</li>
+<li>Создайте пустой репозиторий<ul>
+<li>Имя по желанию, например <code>hello</code></li>
+<li>Дайте осмысленное описание</li>
+<li>Не добавляйте License, .gitignore, README</li>
+</ul>
+</li>
+<li>Скопируйте полный путь до репозитория<ul>
+<li>что-то вроде <code>https://github.com/vasya/hello.git</code></li>
+</ul>
+</li>
+<li>Откройте окно Git Graph</li>
+<li>Нажмите кнопку <code>Repository Settings</code> справа вверху</li>
+<li>Нажмите <code>Add remote</code></li>
+<li>Введите:<ul>
+<li>Name: <code>origin</code> (по традиции)</li>
+<li>Fetch URL: путь к репозиторию на GitHub</li>
+</ul>
+</li>
+<li>Нажмите кнопку <code>Publish Changes</code> слева внизу (или <code>F1</code> + <code>Git Sync</code>)</li>
+<li>Подтвердите репозиторий для синхронизации</li>
+<li>Согласитесь на использование manager для хранения паролей</li>
+<li>Дождитесь синхронизации изменений</li>
+<li>Вернитесь на сайт GitHub, на страницу своего репозитория и обновите её</li>
+<li>Убедитесь, что Ваши изменения синхронизированы</li>
+</ul>
+</li>
+<li>Ветвление и слияние<ul>
+<li>Вернитесь в окно Git Graph</li>
+<li>Правой кнопкой мыши на первом коммите создайте новую ветку (<code>Create Branch</code>)<ul>
+<li>Дайте ей имя, например <code>vetka</code></li>
+<li>И сразу же сделайте ей <code>Check out</code> (сделайте активной)</li>
+</ul>
+</li>
+<li>Убедитесь, что файл <code>readme.md</code> откатился к предыдущему состоянию</li>
+<li>Создайте рядом ещё один файл<ul>
+<li>Например <code>proba.md</code></li>
+<li>Добавьте в него какое-нибудь содержимое</li>
+<li>Сохраните</li>
+</ul>
+</li>
+<li>Сделайте коммит с осмысленным текстом (например, <code>Первое ветвление</code>)</li>
+<li>Отошлите изменения на GitHub</li>
+<li>Убедитесь, что на сайте GitHub у Вашего репозитория теперь есть две ветки и между ними легко переключаться</li>
+<li>Сделайте <code>Checkout</code> ветке <code>master</code> (В окне Git Graph либо щёлкните по имени ветки в левом нижнем углу)</li>
+<li>В окне Git Graph слейте (<code>Merge into current branch</code>) ветку <code>vetka</code> к текущей ветке (<code>master</code>)</li>
+<li>Посмотрите, как выглядит слияние</li>
+<li>Убедитесь, что оба файла имеют правильное содержимое</li>
+<li>Отправьте изменения на GitHub</li>
+<li>Убедитесь, что изменения видны на сайте GitHub</li>
+</ul>
+</li>
+<li>Если всё в порядке - пришлите ссылку на Ваш репозиторий в качестве решения домашнего задания</li>
+</ul>
+</div><footer class="container-fluid"><hr><small>&copy; Stas Ukolov, 2016 - 2019</small></footer></body></html>
