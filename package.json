@@ -37,7 +37,7 @@
     "gulp": "^4.0.2",
     "gulp-debug": "^4.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-markdown": "^4.0.0",
+    "gulp-markdown": "^5.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
