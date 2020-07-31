@@ -4,9 +4,13 @@
   "alias": "ukoloff",
   "headers": [
     {
-      "headers": {
-        "X-Clacks-Overhead": "GNU Terry Pratchett"
-      }
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Clacks-Overhead",
+          "value": "GNU Terry Pratchett"
+        }
+      ]
     }
   ],
   "builds": [
