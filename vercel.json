@@ -2,6 +2,13 @@
   "name": "ukoloff",
   "version": 2,
   "alias": "ukoloff",
+  "headers": [
+    {
+      "headers": {
+        "X-Clacks-Overhead": "GNU Terry Pratchett"
+      }
+    }
+  ],
   "builds": [
     {
       "src": "package.json",
