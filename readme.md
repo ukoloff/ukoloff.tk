@@ -43,7 +43,8 @@ Old version are in
   * [GitHub](https://github.com/) itself
     + [GitHub Pages](https://pages.github.com/)
   * [GitLab](https://gitlab.com/)
-  * [now.sh](https://zeit.co/now)
+  * ~~[now.sh](https://zeit.co/now)~~
+    [Vercel](https://vercel.com/)
   * [Jekyll](https://jekyllrb.com/)
     + [repo](https://github.com/jekyll/jekyll)
     + [gem](https://rubygems.org/gems/jekyll)
