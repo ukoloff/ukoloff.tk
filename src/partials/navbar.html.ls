@@ -189,9 +189,9 @@ nav class: "navbar navbar-inverse navbar-static-top", !->
                   !-> fa \gitlab
                   \@GitLab
                 li !-> a do
-                  href: \http://ukoloff.now.sh/
+                  href: \http://ukoloff.vercel.app/
                   !-> fa \clock-o
-                  \@now.sh
+                  \@Vercel
 
       ul class: "nav navbar-nav navbar-right", !->
         li class: \dropdown, !->
