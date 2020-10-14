@@ -10,9 +10,9 @@ title: Материалы к курсу WEB-дизайн
 Сдавайте задания,
 просто присылая ссылку
 
-## Класс на Stepic
+## Класс на Stepik
 
-[Ссылка для регистрации][Stepic]
+[Ссылка для регистрации][Stepik]
 
 Курс надо пройти полностью,
 получив все баллы.
@@ -41,7 +41,7 @@ title: Материалы к курсу WEB-дизайн
 
 [CodePen]:  https://codepen.io/
 [repl.it]:  https://repl.it/
-[Stepic]:   https://stepik.org/join-class/f86726c0f1c0eed1d1feeaf0790806c3588d9e41
+[Stepik]:   https://stepik.org/join-class/f86726c0f1c0eed1d1feeaf0790806c3588d9e41
 [htmlbook]: http://htmlbook.ru/
 [html@mdn]: https://developer.mozilla.org/ru/docs/Web/HTML
 [css@mdn]:  https://developer.mozilla.org/ru/docs/Web/CSS
