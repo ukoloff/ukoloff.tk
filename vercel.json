@@ -2,9 +2,16 @@
   "name": "ukoloff",
   "version": 2,
   "alias": "ukoloff",
-  "regions": [
-    "arn1",
-    "dub1"
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Clacks-Overhead",
+          "value": "GNU Terry Pratchett"
+        }
+      ]
+    }
   ],
   "builds": [
     {
