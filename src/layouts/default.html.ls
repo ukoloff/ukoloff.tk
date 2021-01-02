@@ -13,6 +13,7 @@ html !->
       content: "Gulp v#{require \gulp/package .version}"
 
     css-tag <[ font-awesome ]>.map -> "/css/#{it}.min.css"
+    css-tag extra-css!map -> "#{it}.css"
 
     script-tag \/theme/init.js defer: false
     script-tag <[ polyfill bootstrap-native ]>.map -> "/js/#{it}.min.js"
@@ -30,6 +31,11 @@ html !->
   [].concat do
     @document.front-matter?.js or []
     @site.js or []
+
+~function extra-css
+  [].concat do
+    @document.front-matter?.css or []
+    @site.css or []
 
 !function script-tag(list, options)
   for src in [].concat list
