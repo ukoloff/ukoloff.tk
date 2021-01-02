@@ -1,40 +1,53 @@
 ---
 title: Материалы к курсу WEB-дизайн
 ---
+<base target="_blank">
 
-## Сайты для удобного просмотра
+## Сервисы для выполнения заданий online
 
-- [CodePen]
 - [repl.it] (Выбирайте язык `HTML, CSS, JS`)
 
-Рекомендуется зарегистрироваться
-хотя бы на одном;
-удобно будет сдавать задания,
+Сдавайте задания,
 просто присылая ссылку
 
-## Класс на Stepic
+## Класс на Stepik
 
-[Ссылка для регистрации][Stepic]
+[Ссылка для регистрации][Stepik]
 
-## Практические задания
+Курс надо пройти полностью,
+получив все баллы.
 
-  1. [Введение в HTML](01.html) (11.09.2019)
-  1. [Продвинутый HTML](02.html) (18.09.2019)
-  1. [Продвинутый HTML++](03.html) (25.09.2019)
-  1. [CSS. Начало](04.html) (02.10.2019)
-  1. [Навигация](05.html) (09.10.2019)
-  1. [Потрясающе! &copy;](06.html) (30.10.2019)
-  1. [Хьюстон наносит ответный удар](07.html) (06.11.2019)
-  1. [Bootstrap](08.html) (20.11.2019)
-  1. [Git](09.html) (27.11.2019)
-  1. [Markdown](10.html) (04.12.2019)
-  1. [Mais enfin](11.html)! (11.12.2019)
+Кроме того,
+некоторые домашние задания
+взяты прямо отсюда.
+
+## Лабораторные работы
+
+1. [HTML. Азы][lab01]
+1. [HTML][lab02]
+1. [CSS. Азы][lab03]
+1. [CSS. Навигация][lab04]
 
 ## Справочные материалы
 
 - [htmlbook]
+- MDN
+  - [HTML][html@mdn]
+  - [CSS][css@mdn]
 
-[CodePen]: https://codepen.io/
-[repl.it]: https://repl.it/
-[Stepic]: https://stepik.org/join-class/d96bcf2b40faf139dc7c2191f49ef8aeea0cd193
+## Задания за прошлые годы
+
+- [2019](../h.2019/)
+
+[CodePen]:  https://codepen.io/
+[repl.it]:  https://repl.it/
+[Stepik]:   https://stepik.org/join-class/f86726c0f1c0eed1d1feeaf0790806c3588d9e41
 [htmlbook]: http://htmlbook.ru/
+[html@mdn]: https://developer.mozilla.org/ru/docs/Web/HTML
+[css@mdn]:  https://developer.mozilla.org/ru/docs/Web/CSS
+
+[lab01]: https://colab.research.google.com/drive/1TUax2cKAgGQkV-NcJFbiszb4WhM0PeiC?usp=sharing
+[lab02]: https://colab.research.google.com/drive/1f-ExyVhjGntnN8VjbVsyuiielcEaaLe2?usp=sharing
+[lab03]: https://colab.research.google.com/drive/1dYvX0pXDbujWxUJEgf2ajxIxfW4OpnZ_?usp=sharing
+[lab04]: https://colab.research.google.com/drive/18Vc7F4FezUWFIlND-l3V04gjpGTpFblv?usp=sharing
+
