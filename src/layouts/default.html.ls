@@ -12,6 +12,11 @@ html !->
       name: \generator
       content: "Gulp v#{require \gulp/package .version}"
 
+    # https://habr.com/ru/post/669028/
+    link do
+      rel: "shortcut icon"
+      href: "data:,"
+
     css-tag <[ font-awesome ]>.map -> "/css/#{it}.min.css"
     css-tag extra-css!map -> "#{it}.css"
 
