@@ -42,6 +42,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.2.0",
     "livescript": "^1.6.0",
+    "terser": "^4.8.1",
     "through2": "^3.0.1",
     "valid-8": "^1.0.1",
     "vinyl-sourcemaps-apply": "^0.2.1",
